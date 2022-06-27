@@ -270,12 +270,12 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 				
 	case 'fixupdate':
                updiana(conn , mek , q )
-          breack
+          break
 
 
   case 'hasupdate':
                fixdiana(conn , mek , q )
-          breack
+          break
 					case 'add' :
 					add(conn , mek , q)
 					break
