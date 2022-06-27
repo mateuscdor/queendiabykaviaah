@@ -188,12 +188,12 @@ break
 					
 					break
 //================================================UPDATE=====================================================					
-				case 'updatenow' :	
+				case 'update now' :	
 					if (!isMe) return
 					 await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
-        reply('no updates')    
+         conn.sendMessage(from , { text: "no updates" }, { quoted: mek } )    
     } else {
     if (Config.HEROKU.HEROKU) {
             try {
@@ -221,7 +221,7 @@ break
 	break	
 //===============================================CHECK UPDATE=========================================					
 					
-					case 'checkupdate' :	
+					case 'check update' :	
 					if (!isMe) return
 					 await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
