@@ -18,11 +18,11 @@
 
 "ANTIGRP_LINK": {"description": " ","value": "false" , "required": true },
 
-"VOICE_EVA": {"description": " ","value": " false" , "required": true },
+"VOICE_EVA": {"description": " ","value": "false" , "required": true },
 
-"CHATBOT": {"description": " ","value": " false" , "required": true },
+"CHATBOT": {"description": " ","value": "false" , "required": true },
 
-"AUTO_BİO": {"description": " ","value": " false" , "required": true },
+"AUTO_BİO": {"description": " ","value": "false" , "required": true },
 
 "CAP_BIO": {"description": " ","value": "```👸 GENARATED BY 𝚀𝚄𝙴𝙴𝙽 𝙳𝙸𝙰𝙽𝙰👸```" , "required": true },
 
@@ -30,11 +30,11 @@
 
 "GAN_IMAGE": {"description": " ","value": "https://telegra.ph/file/3217c19d381ae34b38012.jp" , "required": true },
 
-"INBOX_BLOCK": {"description": " ","value": " false" , "required": true },
+"INBOX_BLOCK": {"description": " ","value": "false" , "required": true },
 
-"LANGUAGE": {"description": " ","value": " EN" , "required": true },
+"LANGUAGE": {"description": " ","value": "EN" , "required": true },
 
-"ALIVE_MESSAGE": {"description": " ","value": " default" , "required": true },
+"ALIVE_MESSAGE": {"description": " ","value": "default" , "required": true },
 
 "ALIVE_LOGO": {"description": " ","value": "https://telegra.ph/file/3217c19d381ae34b38012.jpg" , "required": true },
 
@@ -64,7 +64,7 @@
 
 "BYE_GIF": {"description": " ","value": "https://telegra.ph/file/5850ee81491205afc2140.mp4" , "required": true },
 
-"XTEAM_API": {"description": " ","value": " " , "required": false },
+"XTEAM_API": {"description": " ","value": "" , "required": false },
 
 "GREETING_BG": {"description": " ","value": "https://i.hizliresim.com/loUtAb.jpg" , "required": true },
 
