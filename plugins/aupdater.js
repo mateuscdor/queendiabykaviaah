@@ -29,8 +29,7 @@ const sender = mek.key.fromMe ? (conn.user.id.split(':')[0]+'@s.whatsapp.net' ||
 			const pushname = mek.pushName || 'Sin Nombre'
 			
 			const isMe = botNumber.includes(senderNumber)
-			const isOwner = ownerNumber.includes(senderNumber) || isMe
-
+			
 
 					if (!isMe) return
 					 await git.fetch();
