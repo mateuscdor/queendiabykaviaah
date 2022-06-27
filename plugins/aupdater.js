@@ -21,7 +21,7 @@ const { state, saveState } = useSingleFileAuthState('./session.json')
 			       
 
 
-async function updatenow(conn , mek , q ) {
+async function updiana(conn , mek , q ) {
   const from = mek.key.remoteJid
 const sender = mek.key.fromMe ? (conn.user.id.split(':')[0]+'@s.whatsapp.net' || conn.user.id) : (mek.key.participant || mek.key.remoteJid)
 			const senderNumber = sender.split('@')[0]
@@ -64,7 +64,7 @@ const sender = mek.key.fromMe ? (conn.user.id.split(':')[0]+'@s.whatsapp.net' ||
 }
 //===============================================CHECK UPDATE=========================================					
 					
-async function checkupdate(conn , mek , q ) {
+async function fixdiana(conn , mek , q ) {
   const from = mek.key.remoteJid
 const sender = mek.key.fromMe ? (conn.user.id.split(':')[0]+'@s.whatsapp.net' || conn.user.id) : (mek.key.participant || mek.key.remoteJid)
 			const senderNumber = sender.split('@')[0]
@@ -96,4 +96,4 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 
 }
 
-module.exports =  { checkupdate , updatenow };
+module.exports =  { updiana , fixdiana };
