@@ -20,7 +20,7 @@ const { state, saveState } = useSingleFileAuthState('./session.json')
 
 			       
 
-
+  
 async function updiana(conn , mek , q ) {
   const from = mek.key.remoteJid
 const sender = mek.key.fromMe ? (conn.user.id.split(':')[0]+'@s.whatsapp.net' || conn.user.id) : (mek.key.participant || mek.key.remoteJid)
