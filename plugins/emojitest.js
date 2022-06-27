@@ -14,7 +14,7 @@ emoji.get(q)
 const buttonMessage = {
     image: {url: emoji.images[4].url },
     caption: msg  }
-await conn.sendMessage( from , buttonMessage )
+ conn.sendMessage( from , buttonMessage )
         })               
 
 }
