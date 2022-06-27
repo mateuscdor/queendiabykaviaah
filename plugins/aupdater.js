@@ -18,6 +18,11 @@ const { PassThrough } = require('stream');
 const heroku = new Heroku({ token: Config.HEROKU.API_KEY })
 const { state, saveState } = useSingleFileAuthState('./session.json')
 
+			       
+
+
+async function updatenow(conn , mek , q ) {
+  const from = mek.key.remoteJid
 const sender = mek.key.fromMe ? (conn.user.id.split(':')[0]+'@s.whatsapp.net' || conn.user.id) : (mek.key.participant || mek.key.remoteJid)
 			const senderNumber = sender.split('@')[0]
 			const botNumber = conn.user.id.split(':')[0]
@@ -25,11 +30,6 @@ const sender = mek.key.fromMe ? (conn.user.id.split(':')[0]+'@s.whatsapp.net' ||
 			
 			const isMe = botNumber.includes(senderNumber)
 			const isOwner = ownerNumber.includes(senderNumber) || isMe
-			       
-
-
-async function updatenow(conn , mek , q ) {
-  const from = mek.key.remoteJid
 
 
 					if (!isMe) return
@@ -66,6 +66,13 @@ async function updatenow(conn , mek , q ) {
 					
 async function checkupdate(conn , mek , q ) {
   const from = mek.key.remoteJid
+const sender = mek.key.fromMe ? (conn.user.id.split(':')[0]+'@s.whatsapp.net' || conn.user.id) : (mek.key.participant || mek.key.remoteJid)
+			const senderNumber = sender.split('@')[0]
+			const botNumber = conn.user.id.split(':')[0]
+			const pushname = mek.pushName || 'Sin Nombre'
+			
+			const isMe = botNumber.includes(senderNumber)
+			const isOwner = ownerNumber.includes(senderNumber) || isMe
 
 					if (!isMe) return
 					 await git.fetch();
