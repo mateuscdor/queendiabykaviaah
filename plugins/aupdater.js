@@ -1,6 +1,6 @@
-const Config = require('./config');
-const config = require('./config');
-const events = require("./events");
+const Config = require('../config');
+const config = require('../config');
+const events = require("../events");
 const {
 	default: makeWASocket,
 	useSingleFileAuthState,
