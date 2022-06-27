@@ -17,7 +17,7 @@ const Heroku = require('heroku-client');
 const { PassThrough } = require('stream');
 const heroku = new Heroku({ token: Config.HEROKU.API_KEY })
 const { state, saveState } = useSingleFileAuthState('./session.json')
-const Language = require('./language');
+const Language = require('../language');
 const Lang = Language.getString('updater');
 			       
 
