@@ -23,6 +23,7 @@ const sticker = require('./plugins/sticker')
 const alive = require('./plugins/alive')
 const react = require('./plugins/react')
 const setvar = require('./plugins/heroku')
+const emoji = require('./plugins/emojitest.js')
 const axios = require('axios');
 const prefix = '.'
 const ownerNumber = ['94769370897']
@@ -236,6 +237,11 @@ break
 					case 'react' : 
 					react(  conn , mek , q)
 					break
+				       
+				case 'emoji':
+				emoji(conn , mek , q)
+				break
+					
 					case 'add' :
 					add(conn , mek , q)
 					break
