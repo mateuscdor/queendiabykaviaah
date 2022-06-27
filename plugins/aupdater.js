@@ -35,7 +35,9 @@ const sender = mek.key.fromMe ? (conn.user.id.split(':')[0]+'@s.whatsapp.net' ||
 					 await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
-        reply('no updates')    
+      //  reply('no updates')  
+await  conn.sendMessage(from , { text: 'no updates' }, { quoted: mek } )
+  
     } else {
     if (Config.HEROKU.HEROKU) {
             try {
