@@ -1,0 +1,16 @@
+{
+    "name": "QUEEN-DIANA",
+    "description": "QUEEN-DIANA  - Makes it easy and fun to use Whatsapp.",
+    "logo": "https://telegra.ph/file/3217c19d381ae34b38012.jpg",
+    "keywords": ["whatsapp", "userbot", "Queen Diana", "md", "bot", "api", "ai"],
+    "repository": "https://github.com/diabykavi/diamydia",
+    "website":   "https://Queen Diana.cf/",
+    "success_url": "https://Queen Diana.cf/",
+    "stack": "container",
+    "addons": [{
+      "plan": "heroku-postgresql"
+    }],
+    "buildpacks": [{
+      "url": "heroku-community/apt"
+      }]
+  }

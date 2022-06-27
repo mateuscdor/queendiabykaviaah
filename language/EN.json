@@ -1,0 +1,46 @@
+{
+    "LANGUAGE": "English",
+    "LANGCODE": "en",
+    "AUTHOR"  : "Mr.Joka",
+    "STRINGS" : { 
+                  "aqua" : {   
+                            "COMMAND"  : "Command",
+                            "DESC"     : "Description",
+                            "EXAMPLE"  : "Example",
+                            "NOT_FOUND": "*I couldnt find a command like this*",
+                            "WARN"     : "Warn"
+                           },
+                  "yt" :   {
+                            "N_SONG"   : "*Please Enter a song!*\n*Example:* ```.song Stay with Justin Bieber ```" ,
+                            "NOT_SONG" : "```I couldn't find your Song 🥲```" ,
+                            "S_YT"     : "*🔍 SEARCHING ON YOUTUBE...*" ,
+                            "N_YT"     : "❌ ```ENTER A TOPIC* \nex : .getyt Whatsapp```" ,
+                            "N_VID"    : "❌ ```ENTER A YOUTUBE VIDEO LINK*\nex : .video https://youtu.be/pyCIKli4YUA" ,
+                            "NOT_VID"  : "```I couldn't find your Video 🥲```"
+                          } ,
+                "admin" : {  
+                             "UR_NOT_ADMIN": "*You are not admin in this group!*",
+                             "IM_NOT_ADMIN": "*I am not admin in this group!*",
+                             "BANNED": "kicked out of the group!",
+                             "GIVE_ME_USER": "*Give me a user!*" ,
+                             "USER_IS_ADMIN" : "*Can not kick group Admins!*" ,
+                             "ADDED"         : "added to the group!!" ,
+                             "E_USER"        : "❌ ```Enter the number to be added to the group with the country code without + mark and space.```"
+    
+                           } ,
+                "stic" : {
+                              "NEED"   : "❌ ``` please mention an image or video```" ,
+                              "C_STIC" : "```🧰creating sticker...```" ,
+                              "N_STIC" : "❌ ``` Please mention a sticker.```" ,
+                              "C_IMG"  : "```🧰converting sticker to image...```" ,
+                              "C_VID"  : "```🧰converting animated sticker to video...```" 
+                           }
+
+
+
+                 }
+
+
+
+
+}
