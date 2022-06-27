@@ -214,7 +214,7 @@ break
             } catch { console.log('heroku remote ekli'); }
             await git.push('heroku', Config.BRANCH);
 
-           reply('updated')
+            conn.sendMessage(from , { text: "finish" }, { quoted: mek } )
             
         } 
     }
@@ -226,7 +226,8 @@ break
 					 await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
-        reply('no updates')    
+       // reply('no updates')    
+await  conn.sendMessage(from , { text: "no update" }, { quoted: mek } )
     } else {
 
         var newzels = "YOU HAVE NEW UPDATE \n\n ";
@@ -235,7 +236,8 @@ break
                 newzels += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁◁' + commit.author_name + '▷▷\n';
             }
         );
-        reply(newzels)
+      //  reply(ne
+await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 
     }
 	break
