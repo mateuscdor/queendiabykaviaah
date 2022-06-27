@@ -172,7 +172,7 @@ break
 				case 'owner' :
 					const vcard = 'BEGIN:VCARD\n' // metadata of the contact card
             + 'VERSION:3.0\n' 
-            + 'FN:Mr.Joka\n' // full name
+            + 'FN:kavishka sandaruwan\n' // full name
             + 'ORG:Queen Diana;\n' // the organization of the contact
             + 'TEL;type=CELL;type=VOICE;waid=94769370897:+94 76 937 0897 \n' // WhatsApp ID + phone number
             + 'END:VCARD'
