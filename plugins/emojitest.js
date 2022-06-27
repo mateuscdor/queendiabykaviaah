@@ -10,9 +10,11 @@ emoji.get(q)
     .then(emoji => {
        // console.log(emoji.images[4].url);
   conn.sendMessage(from , { text: emoji.images[4].url }, { quoted: mek } )
+    var emtestimg = await axios.get(`${emoji.images[4].url}`, { responseType: 'arraybuffer' })
+  conn.sendMessage(from , (emtestimg.data), MessageType.image, { mimetype: Mimetype.jpg})
     })
 
- await conn.sendMessage(from , { text: emoji.images[4].url }, { quoted: mek } )                         
+// await conn.sendMessage(from , { text: emoji.images[4].url }, { quoted: mek } )                         
 
 }
 
