@@ -10,18 +10,11 @@ emoji.get(q)
     .then(emoji => {
        // console.log(emoji.images[4].url);
   conn.sendMessage(from , { text: emoji.images[4].url }, { quoted: mek } )
-  const buttons = [
-    {buttonId: '.sticker', buttonText: {displayText: 'need it in sticker'}, type: 1}
-  
-  ]
-  
-  const buttonMessage = {
-      image: {url: emoji.images[4].url },
-      caption: q + " converted to a image",
 
-  }
-  
-   conn.sendMessage(from, buttonMessage) 
+const buttonMessage = {
+    image: {url: emoji.images[4].url },
+    caption: msg  }
+await conn.sendMessage( from , buttonMessage )
         })               
 
 }
