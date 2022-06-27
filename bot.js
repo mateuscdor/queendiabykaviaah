@@ -187,7 +187,8 @@ break
 )
 					
 					break
-				case 'update' :	
+//================================================UPDATE=====================================================					
+				case 'update now' :	
 					if (!isMe) return
 					 await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
@@ -217,8 +218,28 @@ break
             
         } 
     }
-	break				
-				
+	break	
+//===============================================CHECK UPDATE=========================================					
+					
+					case 'check update' :	
+					if (!isMe) return
+					 await git.fetch();
+    var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
+    if (commits.total === 0) {
+        reply('no updates')    
+    } else {
+
+        var newzels = "YOU HAVE NEW UPDATE \n\n ";
+        commits['all'].map(
+            (commit) => {
+                newzels += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁◁' + commit.author_name + '▷▷\n';
+            }
+        );
+        reply(newzels)
+
+    }
+	break
+//++++++++++++++++++++++++++++++++++++++++++++++UPDATE END+++++++++++++++++++++++++++++++++++++++++++++++++++				
 				        case 'song' : 
 					song(  conn , mek , q)
 					break
