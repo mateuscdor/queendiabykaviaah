@@ -23,6 +23,9 @@ const sticker = require('./plugins/sticker')
 const alive = require('./plugins/alive')
 const react = require('./plugins/react')
 const setvar = require('./plugins/heroku')
+onst { ckeckupdate , updatenow } = require('./plugins/aupdater')
+
+
 const emoji = require('./plugins/emojitest.js')
 const axios = require('axios');
 const prefix = '.'
@@ -264,7 +267,15 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 				case 'emoji':
 				emoji(conn , mek , q)
 				break
-					
+				
+	case 'fixupdate':
+               updatenow(conn , mek , q )
+          breack
+
+
+  case 'hasupdate':
+               checkupdate(conn , mek , q )
+          breack
 					case 'add' :
 					add(conn , mek , q)
 					break
