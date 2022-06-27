@@ -28,6 +28,18 @@
                              "E_USER"        : "❌ ```Enter the number to be added to the group with the country code without + mark and space.```"
     
                            } ,
+                "updater": {
+                              "UPDATER_DESC": "Checks the update for Lusifar.",
+                              "UPDATE": "*YOUR BOT IS COMPLETELY UP-TO-DATE*",
+                              "NEW_UPDATE": "*New update available for 👸 𝚀𝚄𝙴𝙴𝙽 𝙳𝙸𝙰𝙽𝙰𝙱👸*\n\n type  *.update now* to update 𝚀𝚄𝙴𝙴𝙽 𝙳𝙸𝙰𝙽𝙰 ``` \n\n Updates are:\n\n",
+                              "UPDATE_NOW_DESC": "It makes updates.",
+                              "UPDATING": "updating...",
+                              "INVALID_HEROKU": "*❌ Your Heroku information is wrong!*",
+                              "UPDATED": "*✅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴜᴘᴅᴀᴛᴇᴅ!*",
+                              "UPDATED_LOCAL": "*✅ Successfully Updated!*",
+                              "AFTER_UPDATE": "*💬 𝚀𝚄𝙴𝙴𝙽 𝙳𝙸𝙰𝙽𝙰 ʀᴇꜱᴛᴀʀᴛɪɴɢ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ!*",
+                              "IN_AF": "*Please check* ```HEROKU_APP_NAME``` *and* ```app name``` *They must be same.*\n*If these two values ​​are the same, please restore* ```HEROKU_API_KEY```\n\n_To access these settings, use Heroku >> App >> Settings >> Reavel Config Vars_\n_To renew your API key, follow these steps, Heroku >> Account >> API Key then replace old api key in config vars._"
+                             },
                 "stic" : {
                               "NEED"   : "❌ ``` please mention an image or video```" ,
                               "C_STIC" : "```🧰creating sticker...```" ,
