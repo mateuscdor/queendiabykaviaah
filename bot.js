@@ -179,7 +179,7 @@ break
     from,
     { 
         contacts: { 
-            displayName: '𝓜𝓻.𝓙𝓸𝓴𝓪', 
+            displayName: 'kavishka sandaruwan (DIANA OWNEER)', 
             contacts: [{ vcard }] 
         }
     } , { quoted: mek }
