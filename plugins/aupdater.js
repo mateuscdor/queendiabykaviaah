@@ -60,7 +60,7 @@ await  conn.sendMessage(from , { text: "Lang.UPDATE" }, { quoted: mek } )
             await git.push('heroku', Config.BRANCH);
 
             conn.sendMessage(from , { text: "Lang.UPDATED_LOCAL" }, { quoted: mek } );
-            conn.sendMessage(from , { text: "Lang.AFTER_UPDATE$ }, { quoted: mek } );
+            conn.sendMessage(from , { text: "Lang.AFTER_UPDATE" }, { quoted: mek } );
 
         } 
     }
