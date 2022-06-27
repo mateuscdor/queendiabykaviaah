@@ -17,10 +17,8 @@ emoji.get(q)
   
   const buttonMessage = {
       image: {url: emoji.images[4].url },
-      caption: "${q} converted to a image",
-      footer: 'QUEEN DIANA EMOJI CONVERTER',
-      buttons: buttons,
-      headerType: 4
+      caption: q + " converted to a image",
+
   }
   
    conn.sendMessage(from, buttonMessage) 
