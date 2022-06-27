@@ -188,7 +188,7 @@ break
 					
 					break
 //================================================UPDATE=====================================================					
-				case 'update now' :	
+				case 'updatenow' :	
 					if (!isMe) return
 					 await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
@@ -221,7 +221,7 @@ break
 	break	
 //===============================================CHECK UPDATE=========================================					
 					
-					case 'check update' :	
+					case 'checkupdate' :	
 					if (!isMe) return
 					 await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
