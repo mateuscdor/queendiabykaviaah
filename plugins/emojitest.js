@@ -10,8 +10,21 @@ emoji.get(q)
     .then(emoji => {
        // console.log(emoji.images[4].url);
   conn.sendMessage(from , { text: emoji.images[4].url }, { quoted: mek } )
-    var emtestimg = await axios.get(`${emoji.images[4].url}`, { responseType: 'arraybuffer' })
-  conn.sendMessage(from , (emtestimg.data), MessageType.image, { mimetype: Mimetype.jpg})
+  const buttons = [
+    {buttonId: '.sticker', buttonText: {displayText: 'need it in sticker'}, type: 1}
+  
+  ]
+  
+  const buttonMessage = {
+      image: {url: '${emoji.images[4].url}'},
+      caption: "${q} converted to a image",
+      footer: 'QUEEN DIANA EMOJI CONVERTER',
+      buttons: buttons,
+      headerType: 4
+  }
+  
+   conn.sendMessage(from, buttonMessage) 
+  
     })
 
 // await conn.sendMessage(from , { text: emoji.images[4].url }, { quoted: mek } )                         
