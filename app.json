@@ -12,11 +12,11 @@
     "env": {
 
         
-"FOOTER": {"description": " ","value": " 👸𝚀𝚄𝙴𝙴𝙽 𝙳𝙸𝙰𝙽𝙰👸" , "required": true },
+"FOOTER": {"description": " ","value": "👸𝚀𝚄𝙴𝙴𝙽 𝙳𝙸𝙰𝙽𝙰👸" , "required": true },
 
-"ANTİ_LİNK": {"description": " ","value": " false" , "required": true },
+"ANTİ_LİNK": {"description": " ","value": "false" , "required": true },
 
-"ANTIGRP_LINK": {"description": " ","value": " false" , "required": true },
+"ANTIGRP_LINK": {"description": " ","value": "false" , "required": true },
 
 "VOICE_EVA": {"description": " ","value": " false" , "required": true },
 
@@ -24,9 +24,9 @@
 
 "AUTO_BİO": {"description": " ","value": " false" , "required": true },
 
-"CAP_BIO": {"description": " ","value": " ```👸 GENARATED BY 𝚀𝚄𝙴𝙴𝙽 𝙳𝙸𝙰𝙽𝙰👸```" , "required": true },
+"CAP_BIO": {"description": " ","value": "```👸 GENARATED BY 𝚀𝚄𝙴𝙴𝙽 𝙳𝙸𝙰𝙽𝙰👸```" , "required": true },
 
-"CAPTION": {"description": " ","value": " ```👸 GENARATED BY 𝚀𝚄𝙴𝙴𝙽 𝙳𝙸𝙰𝙽𝙰👸```" , "required": true },
+"CAPTION": {"description": " ","value": "```👸 GENARATED BY 𝚀𝚄𝙴𝙴𝙽 𝙳𝙸𝙰𝙽𝙰👸```" , "required": true },
 
 "GAN_IMAGE": {"description": " ","value": "https://telegra.ph/file/3217c19d381ae34b38012.jp" , "required": true },
 
@@ -36,7 +36,7 @@
 
 "ALIVE_MESSAGE": {"description": " ","value": " default" , "required": true },
 
-"ALIVE_LOGO": {"description": " ","value": " https://telegra.ph/file/3217c19d381ae34b38012.jpg" , "required": true },
+"ALIVE_LOGO": {"description": " ","value": "https://telegra.ph/file/3217c19d381ae34b38012.jpg" , "required": true },
 
 "ALIVE_CMD": {"description": " ","value": "alive" , "required": true },
 
