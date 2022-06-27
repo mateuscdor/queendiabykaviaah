@@ -17,7 +17,8 @@ const Heroku = require('heroku-client');
 const { PassThrough } = require('stream');
 const heroku = new Heroku({ token: Config.HEROKU.API_KEY })
 const { state, saveState } = useSingleFileAuthState('./session.json')
-
+const Language = require('./language');
+const Lang = Language.getString('updater');
 			       
 
   
@@ -36,14 +37,14 @@ const sender = mek.key.fromMe ? (conn.user.id.split(':')[0]+'@s.whatsapp.net' ||
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
       //  reply('no updates')  
-await  conn.sendMessage(from , { text: 'no updates' }, { quoted: mek } )
+await  conn.sendMessage(from , { text: Lang.UPDATE }, { quoted: mek } )
   
     } else {
     if (Config.HEROKU.HEROKU) {
             try {
                 var app = await heroku.get('/apps/' + Config.HEROKU.APP_NAME)
             } catch {
-               reply('invalid heroku app name')
+                conn.sendMessage(from , { text: Lang.INVALID_HEROKU + "\n\n" + IN_AF }, { quoted: mek } );
             }
 
             git.fetch('upstream', Config.BRANCH);
@@ -58,8 +59,9 @@ await  conn.sendMessage(from , { text: 'no updates' }, { quoted: mek } )
             } catch { console.log('heroku remote ekli'); }
             await git.push('heroku', Config.BRANCH);
 
-            conn.sendMessage(from , { text: "finish" }, { quoted: mek } )
-            
+            conn.sendMessage(from , { text: Lang.UPDATED_LOCAL }, { quoted: mek } );
+            conn.sendMessage(from , { text: Lang.AFTER_UPDATE }, { quoted: mek } );
+
         } 
     }
 }
@@ -80,10 +82,10 @@ const sender = mek.key.fromMe ? (conn.user.id.split(':')[0]+'@s.whatsapp.net' ||
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
        // reply('no updates')    
-await  conn.sendMessage(from , { text: "no update" }, { quoted: mek } )
+await  conn.sendMessage(from , { text: Lang.UPDATE }, { quoted: mek } )
     } else {
 
-        var newzels = "YOU HAVE NEW UPDATE \n\n ";
+        var newzels = Lang.NEW_UPDATE ;
         commits['all'].map(
             (commit) => {
                 newzels += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁◁' + commit.author_name + '▷▷\n';
