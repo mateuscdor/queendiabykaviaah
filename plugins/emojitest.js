@@ -8,8 +8,8 @@ async function emoji(conn , mek , q ) {
 const emoji = new EmojiAPI();
 emoji.get("🥺")
     .then(emoji => {
-        console.log(emoji.images[4].url);
-  await conn.sendMessage(from , { text: emoji.images[4].url }, { quoted: mek } )
+       // console.log(emoji.images[4].url);
+  conn.sendMessage(from , { text: emoji.images[4].url }, { quoted: mek } )
     })
 
                           
