@@ -13,7 +13,7 @@ emoji.get(q)
 
 const buttonMessage = {
     image: {url: emoji.images[4].url },
-    caption: msg  }
+    caption: config.CAPTION  }
  conn.sendMessage( from , buttonMessage )
         })               
 
