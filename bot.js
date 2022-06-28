@@ -23,7 +23,7 @@ const sticker = require('./plugins/sticker')
 const alive = require('./plugins/alive')
 const react = require('./plugins/react')
 const setvar = require('./plugins/heroku')
-//const { updiana , fixdiana } = require('./plugins/aupdater')
+const { updiana , fixdiana } = require('./plugins/aupdater')
 
 
 const emoji = require('./plugins/emojitest.js')
