@@ -46,6 +46,7 @@ await  conn.sendMessage(from , { text: Lang.UPDATE }, { quoted: mek } )
             } catch {
                 conn.sendMessage(from , { text: Lang.INVALID_HEROKU + "\n\n" + IN_AF }, { quoted: mek } );
             }
+            conn.sendMessage(from , { text: Lang.UPDATING }, { quoted: mek } );
 
             git.fetch('upstream', Config.BRANCH);
             git.reset('hard', ['FETCH_HEAD']);
@@ -88,7 +89,7 @@ await  conn.sendMessage(from , { text: Lang.UPDATE }, { quoted: mek } )
         var newzels = Lang.NEW_UPDATE ;
         commits['all'].map(
             (commit) => {
-                newzels += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁◁' + commit.author_name + '▷▷\n';
+                newzels += '\n\n' +'🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' ◁◁' + commit.author_name + '▷▷\n';
             }
         );
       //  reply(ne
