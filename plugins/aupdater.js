@@ -9,7 +9,7 @@ const {
 } = require('@adiwajshing/baileys')
 const fs = require('fs')
 const P = require('pino')
-const qrcode = require('qrcode-terminal')
+
 const simpleGit = require('simple-git');
 const git = simpleGit();
 const exec = require('child_process').exec;
