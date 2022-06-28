@@ -46,8 +46,8 @@ const connectToWA = () => {
 			}
 		} else if (connection === 'open') {
 			console.log('conected')
-			console.log('Queen Diana is Working'+ config.WORKTYPE +'  Now!')
-			const msg = '*Queen Diana is Working'+ config.WORKTYPE +'  Now! 👸*\n\n```Please do not try plugins here. This is your LOG number.```\n_You can use commands in any other chat :)_\n\n\nThanks for using Queen DIANA'
+			console.log('Queen Diana is Working '+ config.WORKTYPE +' Now!')
+			const msg = '*Queen Diana is Working '+ config.WORKTYPE +' Now! 👸*\n\n```Please do not try plugins here. This is your LOG number.```\n_You can use commands in any other chat :)_\n\n\nThanks for using Queen DIANA'
 			
 
 const buttonMessage = {
