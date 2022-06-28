@@ -1,4 +1,4 @@
-/*const Config = require('../config');
+const Config = require('../config');
 const config = require('../config');
 const events = require("../events");
 const {
@@ -101,4 +101,4 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 }
 
 module.exports =  { updiana , fixdiana };
-*/
+
