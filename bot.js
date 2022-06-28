@@ -23,7 +23,7 @@ const sticker = require('./plugins/sticker')
 const alive = require('./plugins/alive')
 const react = require('./plugins/react')
 const setvar = require('./plugins/heroku')
-const { updiana , fixdiana } = require('./plugins/aupdater')
+//const { updiana , fixdiana } = require('./plugins/aupdater')
 
 
 const emoji = require('./plugins/emojitest.js')
@@ -191,7 +191,7 @@ break
 )
 					
 					break
-//================================================UPDATE=====================================================					
+/*/================================================UPDATE=====================================================					
 				case 'update now' :	
 					if (!isMe) return
 					 await git.fetch();
@@ -245,7 +245,7 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 
     }
 	break
-//++++++++++++++++++++++++++++++++++++++++++++++UPDATE END+++++++++++++++++++++++++++++++++++++++++++++++++++				
+//++++++++++++++++++++++++++++++++++++++++++++++UPDATE END+++++++++++++++++++++++++++++++++++++++++++++++++++	*/			
 				        case 'song' : 
 					song(  conn , mek , q)
 					break
@@ -269,7 +269,7 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 				emoji(conn , mek , q)
 				break
 				
-	case 'fixupdate':
+	/*case 'fixupdate':
                updiana(conn , mek , q )
           break
 
@@ -277,7 +277,7 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
   case 'hasupdate':
                fixdiana(conn , mek , q )
           break
-					case 'add' :
+		*/			case 'add' :
 					add(conn , mek , q)
 					break
 				        case 'video' :
