@@ -269,7 +269,7 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 				emoji(conn , mek , q)
 				break
 				
-	/*case 'fixupdate':
+	case 'fixupdate':
                updiana(conn , mek , q )
           break
 
@@ -277,7 +277,7 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
   case 'hasupdate':
                fixdiana(conn , mek , q )
           break
-		*/			case 'add' :
+					case 'add' :
 					add(conn , mek , q)
 					break
 				        case 'video' :
