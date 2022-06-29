@@ -38,7 +38,7 @@ const emoji = require('./plugins/emojitest.js')
 const plugindb = require('./plugins/sql/plugin');
 
 //=================================END===========================
-const axios = require('axios');
+
 const prefix = '.'
 const ownerNumber = ['94773834316']
 
