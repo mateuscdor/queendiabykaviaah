@@ -615,7 +615,7 @@ const connectToWA = () => {
 			console.log('conected')
       //==============================install plugins=======================================
 
-/*/============================================install exteranal plugins====================================
+============================================install exteranal plugins====================================
 			console.log( chalk.blueBright.italic('⬇️ Installing external plugins...') );
 
         var plugins = await plugindb.PluginDB.findAll();
