@@ -84,6 +84,9 @@ fs.readdirSync('./plugins/sql/').forEach(plugin => {
 
 
 
+console.log('QUEEN DIANA'); 
+console.log('Version:' + config.VERSION );
+console.log('ℹ️ Connecting to WhatsApp... Please wait.');
 
 
 
