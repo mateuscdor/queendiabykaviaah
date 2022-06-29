@@ -61,7 +61,7 @@ fs.readdirSync('./plugins/sql/').forEach(plugin => {
     }
 });
 
-const plugindb = require('./plugins/sql/plugin');
+
 //==========================sql end=======================================
 
 
