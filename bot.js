@@ -629,7 +629,7 @@ const connectToWA = () => {
                 }     
             }
         });
-//======================================= end install exteranal plugins====================================	*/		
+//======================================= end install exteranal plugins====================================			
 //============================================install data base plugins====================================			
 	console.log(chalk.blueBright.italic('⬇️  Installing plugins...') );
         fs.readdirSync('./plugins').forEach(plugin => {
@@ -973,4 +973,5 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 }
 
 connectToWA()
+*/
 */
