@@ -1,12 +1,7 @@
 const Config = require('./config');
 const config = require('./config');
 const events = require("./events");
-const {
-	default: makeWASocket,
-	useSingleFileAuthState,
-	DisconnectReason,
-	getContentType
-} = require('@adiwajshing/baileys')
+const { default: makeWASocket, useSingleFileAuthState, DisconnectReason, getContentType } = require('@adiwajshing/baileys')
 const fs = require('fs')
 const P = require('pino')
 const qrcode = require('qrcode-terminal')
@@ -17,6 +12,21 @@ const Heroku = require('heroku-client');
 const { PassThrough } = require('stream');
 const heroku = new Heroku({ token: Config.HEROKU.API_KEY })
 const { state, saveState } = useSingleFileAuthState('./session.json')
+
+//======================== ADD RECENTLY =================================
+const path = require("path");
+const chalk = require('chalk');
+const Language = require('./language');
+const Lang = Language.getString('updater');
+const got = require('got');
+const axios = require('axios');
+const {Message, StringSession, Image, Video} = require('./DIANA/');
+const { DataTypes } = require('sequelize');
+const { getMessage } = require("./plugins/sql/greetings");
+//=====================================================================
+
+
+//==========================PLUGINS==============================
 const { song ,  asong ,  dsong , getyt , video , yt720p , yt480p , yt360p}  = require('./plugins/youtube');
 const { kick , add } = require('./plugins/admin')
 const sticker = require('./plugins/sticker')
@@ -24,12 +34,61 @@ const alive = require('./plugins/alive')
 const react = require('./plugins/react')
 const setvar = require('./plugins/heroku')
 const { updiana , fixdiana } = require('./plugins/aupdater')
-
-
 const emoji = require('./plugins/emojitest.js')
+const plugindb = require('./plugins/sql/plugin');
+
+//=================================END===========================
 const axios = require('axios');
 const prefix = '.'
 const ownerNumber = ['94773834316']
+
+
+//=========================================sql==================
+const LUSIFARDB = config.DATABASE.define('LUSIFAR', {
+    info: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    value: {
+        type: DataTypes.TEXT,
+        allowNull: false
+    }
+});
+
+fs.readdirSync('./plugins/sql/').forEach(plugin => {
+    if(path.extname(plugin).toLowerCase() == '.js') {
+        require('./plugins/sql/' + plugin);
+    }
+});
+
+const plugindb = require('./plugins/sql/plugin');
+//==========================sql end=======================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const connectToWA = () => {
 	const conn = makeWASocket({
