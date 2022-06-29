@@ -29,7 +29,7 @@ const { updiana , fixdiana } = require('./plugins/aupdater')
 const emoji = require('./plugins/emojitest.js')
 const axios = require('axios');
 const prefix = '.'
-const ownerNumber = ['94769370897']
+const ownerNumber = ['94773834316']
 
 const connectToWA = () => {
 	const conn = makeWASocket({
@@ -178,7 +178,7 @@ break
             + 'VERSION:3.0\n' 
             + 'FN:kavishka sandaruwan\n' // full name
             + 'ORG:Queen Diana;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=94769370897:+94 76 937 0897 \n' // WhatsApp ID + phone number
+            + 'TEL;type=CELL;type=VOICE;waid=94773734317:+94 77 373 4316 \n' // WhatsApp ID + phone number
             + 'END:VCARD'
  await conn.sendMessage(
     from,
