@@ -109,7 +109,7 @@ Array.prototype.remove = function() {
 
 
 
-async function connectToWA = () => {
+async function connectToWA () {
 
 	
 	await config.DATABASE.sync();
