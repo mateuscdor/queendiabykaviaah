@@ -105,6 +105,15 @@ const connectToWA = () => {
 			}
 		} else if (connection === 'open') {
 			console.log('conected')
+        console.log(chalk.blueBright.italic('⬇️  Installing plugins...') );
+        
+
+        fs.readdirSync('./plugins').forEach(plugin => {
+            if(path.extname(plugin).toLowerCase() == '.js') {
+                require('./plugins/' + plugin);
+            }
+        });
+        console.log(chalk.green.bold('Lusifar 𝚠𝚘𝚛𝚔𝚒𝚗𝚐 ' + config.WORKTYPE + ' 𝚗𝚘𝚠 👻'));			
 			console.log('Queen Diana is Working '+ config.WORKTYPE +' Now!')
 			const msg = '*Queen Diana is Working '+ config.WORKTYPE +' Now! 👸*\n\n```Please do not try plugins here. This is your LOG number.```\n_You can use commands in any other chat :)_\n\n\nThanks for using Queen DIANA'
 			
