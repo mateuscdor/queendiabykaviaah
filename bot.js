@@ -133,9 +133,9 @@ const connectToWA = () => {
             }
         });
 //======================================= end install data base plugins====================================			
-        console.log(chalk.green.bold('Lusifar 𝚠𝚘𝚛𝚔𝚒𝚗𝚐 ' + config.WORKTYPE + ' 𝚗𝚘𝚠 👻'));			
-			console.log('Queen Diana is Working '+ config.WORKTYPE +' Now!')
-			const msg = '*Queen Diana is Working '+ config.WORKTYPE +' Now! 👸*\n\n```Please do not try plugins here. This is your LOG number.```\n_You can use commands in any other chat :)_\n\n\nThanks for using Queen DIANA'
+        console.log(chalk.green.bold('bot 𝚠𝚘𝚛𝚔𝚒𝚗𝚐 ' + config.WORKTYPE + ' 𝚗𝚘𝚠 👻'));			
+			console.log('bot is Working '+ config.WORKTYPE +' Now!')
+			const msg = '*bot is Working '+ config.WORKTYPE +' Now! 👸*\n\n```Please do not try plugins here. This is your LOG number.```\n_You can use commands in any other chat :)_\n\n\nThanks for using Queen DIANA'
 			
 
 const buttonMessage = {
