@@ -110,7 +110,7 @@ const connectToWA = () => {
 			console.log('conected')
       //==============================install plugins=======================================
 
-//============================================install exteranal plugins====================================
+/*/============================================install exteranal plugins====================================
 			console.log( chalk.blueBright.italic('⬇️ Installing external plugins...') );
 
         var plugins = await plugindb.PluginDB.findAll();
@@ -124,7 +124,7 @@ const connectToWA = () => {
                 }     
             }
         });
-//======================================= end install exteranal plugins====================================			
+//======================================= end install exteranal plugins====================================	*/		
 //============================================install data base plugins====================================			
 	console.log(chalk.blueBright.italic('⬇️  Installing plugins...') );
         fs.readdirSync('./plugins').forEach(plugin => {
