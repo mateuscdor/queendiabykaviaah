@@ -1,5 +1,5 @@
 
-const events = require("./events");
+const events = require("../events");
 
 
 events.cmd({ name : 'hi' , desc : 'nothing'}  , ( async (conn , mek , q) => {
