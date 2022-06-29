@@ -19,7 +19,7 @@ DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBU
 module.exports = {
     VERSION: '👸 Queen Diana Beta Version',
     CHANNEL: 'https://t.me/',
-    SESSION: process.env.AQUA_SESSION === undefined ? '' : process.env.AQUA_SESSION,
+    SESSION: process.env.LUSIFAR_SESSION === undefined ? '' : process.env.LUSIFAR_SESSION,
     FOOTER: process.env.FOOTER === undefined ? '👸🏻 Queen Diana Beta Version' : process.env.FOOTER,
     ANTİLİNK: process.env.ANTİ_LİNK === undefined ? 'false' : process.env.ANTİ_LİNK,
     ANTIGROUP: process.env.ANTIGRP_LINK === undefined ? 'false' : process.env.ANTIGRP_LINK,
