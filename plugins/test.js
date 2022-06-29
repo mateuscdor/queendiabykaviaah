@@ -1,7 +1,7 @@
 const events = require("./events");
 
 
-events.cmd({ name : 'hi' , desc ; 'nothing'}  , ( async (conn , mek , q) => {
+events.cmd({ name : 'hi' , desc : 'nothing'}  , ( async (conn , mek , q) => {
   const from = mek.key.remoteJid
   const sender = mek.key.fromMe ? (conn.user.id.split(':')[0]+'@s.whatsapp.net' || conn.user.id) : (mek.key.participant || mek.key.remoteJid)
   const senderNumber = sender.split('@')[0]
@@ -16,7 +16,7 @@ events.cmd({ name : 'hi' , desc ; 'nothing'}  , ( async (conn , mek , q) => {
            }
            
            
-           events.cmd({ name : 'hello' , desc ; 'nothing'}  , ( async (conn , mek , q) => {
+           events.cmd({ name : 'hello' , desc : 'nothing'}  , ( async (conn , mek , q) => {
   const from = mek.key.remoteJid
   const sender = mek.key.fromMe ? (conn.user.id.split(':')[0]+'@s.whatsapp.net' || conn.user.id) : (mek.key.participant || mek.key.remoteJid)
   const senderNumber = sender.split('@')[0]
