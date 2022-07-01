@@ -445,7 +445,7 @@ case 'ttwiwm':
  reply("*Can't find anything :(*") 
 } )
  
-   const diatiktokwiwm = dianowmresult.result.nowatermark
+   const diatiktokwiwm = dianowmresult.result.watermark
     conn.sendMessage(from, { video: { url: diatiktokwiwm }, caption: "Here you go!" }, { quoted: m })
    
   break
