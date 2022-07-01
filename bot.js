@@ -270,10 +270,10 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 case 'tiktok':{
   	
   if (!q) return reply('Where is the link?')
-  reply(mess.wait)
+  reply("idqpn tikak")
   if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
    const musim_rambutan = await XeonBotIncTiktok(`${q}`).catch(e => {
- reply(mess.error) 
+ reply("error🥲") 
 } )
    console.log(musim_rambutan)
    const xeontiktokop = musim_rambutan.result.watermark
