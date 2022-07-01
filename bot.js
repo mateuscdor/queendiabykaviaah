@@ -416,7 +416,7 @@ case 'ttwm':
 } )
  
    const diatiktoknowm = result.result.nowatermark
-    conn.sendMessage(from, { video: { url: diatiktoknowm }, caption: "Here you go!" }, { quoted: m })
+    conn.sendMessage(from, { video: { url: diatiktoknowm }, caption: "Here you go!" }, { quoted: mek })
    
   break
   
@@ -430,7 +430,7 @@ case 'ttaud':
 } )
  
    const diatiktokaudio = diataresult.result.nowatermark
-    conn.sendMessage(from, { audio: { url: diatiktokaudio }, mimetype: 'audio/mp4' }, { quoted: m })
+    conn.sendMessage(from, { audio: { url: diatiktokaudio }, mimetype: 'audio/mp4' }, { quoted: mek })
    
  break
  
@@ -446,7 +446,7 @@ case 'ttwiwm':
 } )
  
    const diatiktokwiwm = dianowmresult.result.watermark
-    conn.sendMessage(from, { video: { url: diatiktokwiwm }, caption: "Here you go!" }, { quoted: m })
+    conn.sendMessage(from, { video: { url: diatiktokwiwm }, caption: "Here you go!" }, { quoted: mek })
    
   break
 					
