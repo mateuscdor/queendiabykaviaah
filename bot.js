@@ -24,7 +24,8 @@ const alive = require('./plugins/alive')
 const react = require('./plugins/react')
 const setvar = require('./plugins/heroku')
 const { updiana , fixdiana } = require('./plugins/aupdater')
-
+const Language = require('./language');
+const Lang = Language.getString('updater');
 
 const emoji = require('./plugins/emojitest.js')
 const axios = require('axios');
