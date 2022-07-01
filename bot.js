@@ -295,9 +295,9 @@ conn.sendMessage(from, buttonMessage, {quoted:mek})
 break
 
 
-/*
 
-case 'tiktok':
+
+case 'tktok':
   	
   if (!q) return reply('Where is the link?')
   reply("Downloading")
@@ -331,9 +331,9 @@ conn.sendMessage(from, buttonMessage, {quoted:mek})
 break
 
 
-*
 
 
+/*
  case 'ttnowm':
   	
 	
@@ -347,7 +347,7 @@ break
    const xeonytiktoknowm = result.result.nowatermark
     conn.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: mek })
    
-  break */
+  break *
   
 case 'ttaud':
 	
@@ -363,7 +363,7 @@ case 'ttaud':
    
  break
  
-/*
+/
  
 case 'ttwm':
   	
