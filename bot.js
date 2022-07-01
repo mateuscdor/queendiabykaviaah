@@ -420,7 +420,7 @@ case 'ttwm':
    
   break
   
-case 'ttaud':
+case 'ttonaud':
 	
 	
   if (!q) return reply('Where is the audio?')
