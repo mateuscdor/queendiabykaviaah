@@ -348,7 +348,7 @@ break
     conn.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: mek })
    
   break
-  
+ /* 
 case 'ttaud':
 	
 	
@@ -364,7 +364,7 @@ case 'ttaud':
  break
  
  
- /*
+ 
 case 'ttwm':
   	
 	
