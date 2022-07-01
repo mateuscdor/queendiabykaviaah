@@ -267,7 +267,7 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 					
 
 
-case 'tiktok':{
+/*case 'tiktok':{
   	
   if (!q) return reply('Where is the link?')
   reply("idqpn tikak")
@@ -292,7 +292,96 @@ headerType: 4
 }
 conn.sendMessage(from, buttonMessage, {quoted:mek})
 }
-break					
+break*/
+
+
+
+
+case 'tiktok':{
+  	
+  if (!q) return reply('Where is the link?')
+  reply("Downloading")
+  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+   const result = await XeonBotIncTiktok(`${q}`).catch(e => {
+ reply("*Can't find anything :(*") 
+} )
+   
+   const xeontiktokop = result.result.watermark
+texttk = `Your tiktik video type\n\n
+
+
+
+_Please choose the button below_`
+let buttons = [
+{buttonId: `ttwm ${q}`, buttonText: {displayText: :With Watermark 🖇️'}, type: 1},
+{buttonId: `ttnowm ${q}`, buttonText: {displayText: 'No Watermark ❌'}, type: 1},
+{buttonId: `ttaud ${q}`, buttonText: {displayText: 'Audio 🎶'}, type: 1}
+
+
+]
+let buttonMessage = {
+image: {url: "https://telegra.ph/file/3217c19d381ae34b38012.jpg"},
+caption: texttk,
+footer: `Queen diana TikTok downloader`,
+buttons: buttons,
+headerType: 4
+}
+conn.sendMessage(from, buttonMessage, {quoted:mek})
+}
+break
+
+
+
+
+
+ case 'ttnowm':{
+  	
+	
+  if (!q) return reply('Where is the link?')
+  reply("Downloading")
+  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+   const result = await XeonBotIncTiktok(`${q}`).catch(e => {
+ reply("*Can't find anything :(*") 
+} )
+ 
+   const xeonytiktoknowm = result.result.nowatermark
+    conn.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: m })
+   }
+  break
+  
+case 'ttaud':{
+	
+	
+  if (!q) return reply('Where is the audio?')
+  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+   const result = await XeonBotIncTiktok(`${q}`).catch(e => {
+ reply("*Can't find anything :(*") 
+} )
+ 
+   const xeonytiktokaudio = result.result.nowatermark
+    conn.sendMessage(from, { audio: { url: xeonytiktokaudio }, mimetype: 'audio/mp4' }, { quoted: m })
+   }
+ break
+ 
+ 
+ 
+case 'ttwm':{
+  	
+	
+  if (!q) return reply('Where is the link?')
+  reply("Downloading")
+  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+   const result = await XeonBotIncTiktok(`${q}`).catch(e => {
+ reply("*Can't find anything :(*") 
+} )
+ 
+   const xeonytiktoknowm = result.result.watermark
+    conn.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: m })
+   }
+  break
+  
+
+					
 					
 case 'devil':
 
