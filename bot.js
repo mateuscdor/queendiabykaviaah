@@ -266,7 +266,7 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 					
 					
 
-
+/*
 case 'tiktok':
   	
   if (!q) return reply('Where is the link?')
@@ -296,7 +296,7 @@ break
 
 
 
-/*
+
 case 'tktok':
   	
   if (!q) return reply('Where is the link?')
@@ -334,6 +334,27 @@ break
 
 
 */
+
+case 'ttvt':
+if (!q) return reply('Need a Tik Tok video link')
+  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+  
+const buttons = [ {buttonId: '.ttwiwm' + q, buttonText: {displayText: 'With water mark'}, type: 1}, 
+                   {buttonId: '.ttnowm' + q, buttonText: {displayText: 'Without water mark'}, type: 1}, 
+                   {buttonId: '.ttonaud' + q, buttonText: {displayText: 'Audio Only'}, type: 1} ] 
+          
+          
+          const buttonMessage = { 
+          
+                                   text: "Select your choice in here\n\n\n", 
+                                   footer: 'QUEEN DIANA',
+                                   buttons: buttons, 
+                                   headerType: 1 
+                                   } 
+          
+        
+         conn.sendMessage(from, buttonMessage, {quoted:mek})
+break
  case 'ttnowm':
   	
 	
