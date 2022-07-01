@@ -332,7 +332,7 @@ break
 
 
 
-
+/*
 
  case 'ttnowm':{
   	
@@ -401,7 +401,7 @@ lusifarapi.textpro("https://textpro.me/create-neon-devil-wings-text-effect-onlin
     });
 break
 					
-					
+		*/			
 					
 case 'wolf':
 
