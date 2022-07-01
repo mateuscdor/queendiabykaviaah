@@ -292,7 +292,7 @@ headerType: 4
 }
 conn.sendMessage(from, buttonMessage, {quoted:mek})
 
-break*/
+break
 
 
 
@@ -332,7 +332,7 @@ break
 
 
 
-/*
+
 
  case 'ttnowm':
   	
