@@ -28,6 +28,13 @@ const { updiana , fixdiana } = require('./plugins/aupdater')
 const Language = require('./language');
 const Lang = Language.getString('updater');
 
+
+
+const { XeonBotIncTiktok } = require('./lib/tiktokbyxeon');
+
+
+
+
 const emoji = require('./plugins/emojitest.js')
 const axios = require('axios');
 const prefix = '.'
@@ -258,7 +265,34 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 	break
 					
 					
-					
+
+
+case 'tiktok':{
+  	
+  if (!q) return reply('Where is the link?')
+  reply(mess.wait)
+  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+   const musim_rambutan = await XeonBotIncTiktok(`${q}`).catch(e => {
+ reply(mess.error) 
+} )
+   console.log(musim_rambutan)
+   const xeontiktokop = musim_rambutan.result.watermark
+texttk = `Wanna download no watermark or audio?
+_Please choose the button below_`
+let buttons = [
+{buttonId: `ttnowm ${q}`, buttonText: {displayText: 'No Watermark ❌'}, type: 1},
+{buttonId: `ttaud ${q}`, buttonText: {displayText: 'Audio 🎶'}, type: 1}
+]
+let buttonMessage = {
+video: {url:xeontiktokop},
+caption: texttk,
+footer: `kaviyyattc`,
+buttons: buttons,
+headerType: 4
+}
+conn.sendMessage(from, buttonMessage, {quoted:mek})
+}
+break					
 					
 case 'devil':
 
