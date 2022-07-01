@@ -364,7 +364,7 @@ case 'ttaud':
  break
  
  
- 
+ /*
 case 'ttwm':
   	
 	
@@ -375,10 +375,10 @@ case 'ttwm':
  reply("*Can't find anything :(*") 
 } )
  
-   const xeonytiktoknowm = result.result.watermark
-    conn.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: mek })
+   const xeonytiktokwm = result.result.watermark
+    conn.sendMessage(from, { video: { url: xeonytiktokwm }, caption: "Here you go!" }, { quoted: mek })
    
-  break
+  break*/
   
 
 					
