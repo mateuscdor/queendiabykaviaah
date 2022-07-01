@@ -335,13 +335,14 @@ break
 
 */
 
+
 case 'ttvt':
 if (!q) return reply('Need a Tik Tok video link')
   if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
   
-const buttons = [ {buttonId: '.ttwiwm' + q, buttonText: {displayText: 'With water mark'}, type: 1}, 
-                   {buttonId: '.ttnowm' + q, buttonText: {displayText: 'Without water mark'}, type: 1}, 
-                   {buttonId: '.ttonaud' + q, buttonText: {displayText: 'Audio Only'}, type: 1} ] 
+const buttons = [ {buttonId: '.ttwiwm ${q}', buttonText: {displayText: 'With water mark'}, type: 1}, 
+                   {buttonId: '.ttnowm ${q}', buttonText: {displayText: 'Without water mark'}, type: 1}, 
+                   {buttonId: '.ttonaud ${q}', buttonText: {displayText: 'Audio Only'}, type: 1} ] 
           
           
           const buttonMessage = { 
@@ -355,6 +356,8 @@ const buttons = [ {buttonId: '.ttwiwm' + q, buttonText: {displayText: 'With wate
         
          conn.sendMessage(from, buttonMessage, {quoted:mek})
 break
+
+
  case 'ttnowm':
   	
 	
