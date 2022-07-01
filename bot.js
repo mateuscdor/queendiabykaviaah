@@ -363,7 +363,7 @@ case 'ttaud':
    
  break
  
- 
+*/ 
  
 case 'ttwm':
   	
@@ -378,7 +378,7 @@ case 'ttwm':
    const xeonytiktokwm = result.result.watermark
     conn.sendMessage(from, { video: { url: xeonytiktokwm }, caption: "Here you go!" }, { quoted: mek })
    
-  break*/
+  break
   
 
 					
