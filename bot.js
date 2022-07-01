@@ -1,7 +1,12 @@
 const Config = require('./config');
 const config = require('./config');
 const events = require("./events");
-const { default: makeWASocket, useSingleFileAuthState, DisconnectReason, getContentType } = require('@adiwajshing/baileys')
+const {
+	default: makeWASocket,
+	useSingleFileAuthState,
+	DisconnectReason,
+	getContentType
+} = require('@adiwajshing/baileys')
 const fs = require('fs')
 const P = require('pino')
 const qrcode = require('qrcode-terminal')
@@ -12,21 +17,6 @@ const Heroku = require('heroku-client');
 const { PassThrough } = require('stream');
 const heroku = new Heroku({ token: Config.HEROKU.API_KEY })
 const { state, saveState } = useSingleFileAuthState('./session.json')
-
-//======================== ADD RECENTLY =================================
-const path = require("path");
-const chalk = require('chalk');
-const Language = require('./language');
-const Lang = Language.getString('updater');
-const got = require('got');
-const axios = require('axios');
-const {Message, StringSession, Image, Video} = require('./DIANA/');
-const { DataTypes } = require('sequelize');
-const { getMessage } = require("./plugins/sql/greetings");
-//=====================================================================
-
-
-//==========================PLUGINS==============================
 const { song ,  asong ,  dsong , getyt , video , yt720p , yt480p , yt360p}  = require('./plugins/youtube');
 const { kick , add } = require('./plugins/admin')
 const sticker = require('./plugins/sticker')
@@ -34,110 +24,14 @@ const alive = require('./plugins/alive')
 const react = require('./plugins/react')
 const setvar = require('./plugins/heroku')
 const { updiana , fixdiana } = require('./plugins/aupdater')
+
+
 const emoji = require('./plugins/emojitest.js')
-const plugindb = require('./plugins/sql/plugin');
-
-//=================================END===========================
-
+const axios = require('axios');
 const prefix = '.'
-const ownerNumber = ['94773834316']
+const ownerNumber = ['94769370897']
 
-
-//=========================================sql==================
-const LUSIFARDB = config.DATABASE.define('LUSIFAR', {
-    info: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-    value: {
-        type: DataTypes.TEXT,
-        allowNull: false
-    }
-});
-
-fs.readdirSync('./plugins/sql/').forEach(plugin => {
-    if(path.extname(plugin).toLowerCase() == '.js') {
-        require('./plugins/sql/' + plugin);
-    }
-});
-
-
-//==========================sql end=======================================
-
-
-String.prototype.format = function () {
-    var i = 0, args = arguments;
-    return this.replace(/{}/g, function () {
-      return typeof args[i] != 'undefined' ? args[i++] : '';
-   });
-};
-if (!Date.now) {
-    Date.now = function() { return new Date().getTime(); }
-}
-
-Array.prototype.remove = function() {
-    var what, a = arguments, L = a.length, ax;
-    while (L && this.length) {
-        what = a[--L];
-        while ((ax = this.indexOf(what)) !== -1) {
-            this.splice(ax, 1);
-        }
-    }
-    return this;
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-async function connectToWA () {
-
-	
-	await config.DATABASE.sync();
-    var StrSes_Db = await LUSIFARDB.findAll({
-        where: { info: 'StringSession'
-        }
-    });
-	
-	conn.logger.level = config.DEBUG ? 'debug' : 'warn';
-    var nodb;
-
-    if (StrSes_Db.length < 1) {
-        nodb = true;
-        conn.loadAuthInfo(Session.deCrypt(config.SESSION)); 
-    } else {
-        conn.loadAuthInfo(Session.deCrypt(StrSes_Db[0].dataValues.value));
-    }
-
- 
-
-        const authInfo = conn.base64EncodedAuthInfo();
-        if (StrSes_Db.length < 1) {
-            await LUSIFARDB.create({ info: "StringSession", value: Session.createStringSession(authInfo) });
-        } else {
-            await StrSes_Db[0].update({ value: Session.createStringSession(authInfo) });
-        }
-      
-	
+const connectToWA = () => {
 	const conn = makeWASocket({
 		logger: P({ level: 'silent' }),
 		printQRInTerminal: true,
@@ -152,23 +46,8 @@ async function connectToWA () {
 			}
 		} else if (connection === 'open') {
 			console.log('conected')
-      //==============================install plugins=======================================
-		
-//============================================install data base plugins====================================			
-	console.log(chalk.blueBright.italic('⬇️  Installing plugins...') );
-        fs.readdirSync('./plugins').forEach(plugin => {
-            if(path.extname(plugin).toLowerCase() == '.js') {
-                require('./plugins/' + plugin);
-            }
-        });
-//======================================= end install data base plugins====================================			
-        console.log(chalk.green.bold('Lusifar 𝚠𝚘𝚛𝚔𝚒𝚗𝚐 ' + config.WORKTYPE + ' 𝚗𝚘𝚠 👻'));			
-			console.log('Queen Diana is Working '+ config.WORKTYPE +' Now!')
-			const msg = '*Queen Diana is Working '+ config.WORKTYPE +' Now! 👸*\n\n```Please do not try plugins here. This is your LOG number.```\n_You can use commands in any other chat :)_\n\n\nThanks for using Queen DIANA'
-		
-			
-
-
+			console.log('Queen Diana is Working'+ config.WORKTYPE +'  Now!')
+			const msg = '*Queen Diana is Working'+ config.WORKTYPE +'  Now! 👸*\n\n```Please do not try plugins here. This is your LOG number.```\n_You can use commands in any other chat :)_\n\n\nThanks for using Queen DIANA'
 			
 
 const buttonMessage = {
@@ -279,77 +158,7 @@ await conn.sendMessage(conn.user.id, buttonMessage)
             var sup = config.SUPPORT.split(',');                            
             if(msg.key.remoteJid.includes('-') ? sup.includes(msg.key.remoteJid.split('@')[0]) : sup.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
         }
-//===========================================================================
-		events.commands.map(
-			async (command) =>  {
-				if (msg.message && msg.message.imageMessage && msg.message.imageMessage.caption) {
-					var text_msg = msg.message.imageMessage.caption;
-				} else if (msg.message && msg.message.videoMessage && msg.message.videoMessage.caption) {
-					var text_msg = msg.message.videoMessage.caption;
-				} else if (msg.message) {
-					var text_msg = msg.message.extendedTextMessage === null ? msg.message.conversation : msg.message.extendedTextMessage.text;
-				} else {
-					var text_msg = undefined;
-				}
-		
-				if ((command.on !== undefined && (command.on === 'image' || command.on === 'photo')
-					&& msg.message && msg.message.imageMessage !== null && 
-					(command.pattern === undefined || (command.pattern !== undefined && 
-						command.pattern.test(text_msg)))) || 
-					(command.pattern !== undefined && command.pattern.test(text_msg)) || 
-					(command.on !== undefined && command.on === 'text' && text_msg) ||
-					// Video
-					(command.on !== undefined && (command.on === 'video')
-					&& msg.message && msg.message.videoMessage !== null && 
-					(command.pattern === undefined || (command.pattern !== undefined && 
-						command.pattern.test(text_msg))))) {
-		
-					let sendMsg = false;
-					var chat = conn.chats.get(msg.key.remoteJid)
-						
-					if ((config.SUDO !== false && msg.key.fromMe === false && command.fromMe === true &&
-						(msg.participant && config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.SUDO || config.SUDO.includes(',') ? config.SUDO.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.SUDO)
-					) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
-						if (command.onlyPinned && chat.pin === undefined) return;
-						if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
-						else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
-					}
-					
-					else if ((config.MAHN !== false && msg.key.fromMe === false && command.fromMe === true &&
-						(msg.participant && config.MAHN.includes(',') ? config.MAHN.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == config.MAHN || config.MAHN.includes(',') ? config.MAHN.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == config.MAHN)
-					) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
-						if (command.onlyPinned && chat.pin === undefined) return;
-						if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
-						else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
-					}
-		
-					if (sendMsg) {
-						if (config.SEND_READ && command.on === undefined) {
-							await conn.chatRead(msg.key.remoteJid);
-						}
-						
-						var match = text_msg.match(command.pattern);
-						
-						if (command.on !== undefined && (command.on === 'image' || command.on === 'photo' )
-						&& msg.message.imageMessage !== null) {
-							whats = new Image(conn, msg);
-						} else if (command.on !== undefined && (command.on === 'video' )
-						&& msg.message.videoMessage !== null) {
-							whats = new Video(conn, msg);
-						} else {
-							whats = new Message(conn, msg);
-						}
-		/*
-						if (command.deleteCommand && msg.key.fromMe) {
-							await whats.delete(); 
-						}
-		*/
-					   
-					}
-				}
-			}
-		)
-//==========================================================================================================================				
+			
 			// commands
 			
 			switch (command) {
@@ -369,7 +178,7 @@ break
             + 'VERSION:3.0\n' 
             + 'FN:kavishka sandaruwan\n' // full name
             + 'ORG:Queen Diana;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=94773734317:+94 77 373 4316 \n' // WhatsApp ID + phone number
+            + 'TEL;type=CELL;type=VOICE;waid=94769370897:+94 76 937 0897 \n' // WhatsApp ID + phone number
             + 'END:VCARD'
  await conn.sendMessage(
     from,
@@ -382,8 +191,8 @@ break
 )
 					
 					break
-/*/================================================UPDATE=====================================================					
-				case 'update now' :	
+//================================================UPDATE=====================================================					
+				case 'updatenow' :	
 					if (!isMe) return
 					 await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
@@ -416,7 +225,7 @@ break
 	break	
 //===============================================CHECK UPDATE=========================================					
 					
-					case 'check update' :	
+					case 'checkupdate' :	
 					if (!isMe) return
 					 await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
@@ -436,7 +245,7 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 
     }
 	break
-//++++++++++++++++++++++++++++++++++++++++++++++UPDATE END+++++++++++++++++++++++++++++++++++++++++++++++++++	*/			
+//++++++++++++++++++++++++++++++++++++++++++++++UPDATE END+++++++++++++++++++++++++++++++++++++++++++++++++++				
 				        case 'song' : 
 					song(  conn , mek , q)
 					break
@@ -459,7 +268,7 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 				case 'emoji':
 				emoji(conn , mek , q)
 				break
-				
+/*				
 	case 'fixupdate':
                updiana(conn , mek , q )
           break
@@ -467,7 +276,7 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 
   case 'hasupdate':
                fixdiana(conn , mek , q )
-          break
+          break*/
 					case 'add' :
 					add(conn , mek , q)
 					break
@@ -501,4 +310,3 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 }
 
 connectToWA()
-
