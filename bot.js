@@ -347,7 +347,7 @@ break
    const xeonytiktoknowm = result.result.nowatermark
     conn.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: mek })
    
-  break
+  break */
   
 case 'ttaud':
 	
@@ -363,7 +363,7 @@ case 'ttaud':
    
  break
  
-*/ 
+/*
  
 case 'ttwm':
   	
@@ -380,7 +380,7 @@ case 'ttwm':
    
   break
   
-
+*/
 					
 					
 case 'devil':
