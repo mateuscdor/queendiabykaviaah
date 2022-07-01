@@ -336,7 +336,7 @@ break
 */
 
 
-case 'ttvt':
+case 'tiktok':
 if (!q) return reply('Need a Tik Tok video link')
   if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
   
@@ -357,7 +357,7 @@ const buttons = [ {buttonId: `.ttwiwm ${q}`, buttonText: {displayText: 'With wat
          conn.sendMessage(from, buttonMessage, {quoted:mek})
 break
 
-
+/*
  case 'ttnowm':
   	
 	
@@ -371,7 +371,7 @@ break
    const xeonytiktoknowm = result.result.nowatermark
     conn.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: mek })
    
-  break /*
+  break 
   
 case 'ttaud':
 	
@@ -406,6 +406,49 @@ case 'ttwm':
   
 */
 					
+ case 'ttnowm':
+  		
+  if (!q) return reply('Where is the link?')
+  reply("Downloading")
+  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+   const result = await XeonBotIncTiktok(`${q}`).catch(e => {
+ reply("*Can't find anything :(*") 
+} )
+ 
+   const diatiktoknowm = result.result.nowatermark
+    conn.sendMessage(from, { video: { url: diatiktoknowm }, caption: "Here you go!" }, { quoted: m })
+   
+  break
+  
+case 'ttaud':
+	
+	
+  if (!q) return reply('Where is the audio?')
+  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+   const diataresult = await XeonBotIncTiktok(`${q}`).catch(e => {
+ reply("*Can't find anything :(*") 
+} )
+ 
+   const diatiktokaudio = diataresult.result.nowatermark
+    conn.sendMessage(from, { audio: { url: diatiktokaudio }, mimetype: 'audio/mp4' }, { quoted: m })
+   
+ break
+ 
+ 
+ 
+case 'ttwiwm':
+  		
+  if (!q) return reply('Where is the link?')
+  reply("Downloading")
+  if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+   const dianowmresult = await XeonBotIncTiktok(`${q}`).catch(e => {
+ reply("*Can't find anything :(*") 
+} )
+ 
+   const diatiktokwiwm = dianowmresult.result.nowatermark
+    conn.sendMessage(from, { video: { url: diatiktokwiwm }, caption: "Here you go!" }, { quoted: m })
+   
+  break
 					
 case 'devil':
 
