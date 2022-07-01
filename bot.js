@@ -280,8 +280,8 @@ case 'tiktok':
 texttk = `Wanna download no watermark or audio?
 _Please choose the button below_`
 let buttons = [
-{buttonId: `ttnowm ${q}`, buttonText: {displayText: 'No Watermark ❌'}, type: 1},
-{buttonId: `ttaud ${q}`, buttonText: {displayText: 'Audio 🎶'}, type: 1}
+{buttonId: `.ttnowm ${q}`, buttonText: {displayText: 'No Watermark ❌'}, type: 1},
+{buttonId: `.ttaud ${q}`, buttonText: {displayText: 'Audio 🎶'}, type: 1}
 ]
 let buttonMessage = {
 video: {url:xeontiktokop},
@@ -345,10 +345,10 @@ break
 } )
  
    const xeonytiktoknowm = result.result.nowatermark
-    conn.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: m })
+    conn.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: mek })
    
   break
-  /*
+  
 case 'ttaud':
 	
 	
@@ -359,7 +359,7 @@ case 'ttaud':
 } )
  
    const xeonytiktokaudio = result.result.nowatermark
-    conn.sendMessage(from, { audio: { url: xeonytiktokaudio }, mimetype: 'audio/mp4' }, { quoted: m })
+    conn.sendMessage(from, { audio: { url: xeonytiktokaudio }, mimetype: 'audio/mp4' }, { quoted: mek })
    
  break
  
@@ -376,12 +376,12 @@ case 'ttwm':
 } )
  
    const xeonytiktoknowm = result.result.watermark
-    conn.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: m })
+    conn.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: mek })
    
   break
   
 
-				*/	
+					
 					
 case 'devil':
 
