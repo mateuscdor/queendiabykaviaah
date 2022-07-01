@@ -296,7 +296,7 @@ break
 
 
 
-
+/*
 case 'tktok':
   	
   if (!q) return reply('Where is the link?')
@@ -333,7 +333,7 @@ break
 
 
 
-/*
+*/
  case 'ttnowm':
   	
 	
@@ -347,7 +347,7 @@ break
    const xeonytiktoknowm = result.result.nowatermark
     conn.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: mek })
    
-  break *
+  break /*
   
 case 'ttaud':
 	
