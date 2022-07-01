@@ -267,7 +267,7 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 					
 
 
-/*case 'tiktok':
+case 'tiktok':
   	
   if (!q) return reply('Where is the link?')
   reply("idqpn tikak")
@@ -295,7 +295,7 @@ conn.sendMessage(from, buttonMessage, {quoted:mek})
 break
 
 
-
+/*
 
 case 'tiktok':
   	
@@ -331,7 +331,7 @@ conn.sendMessage(from, buttonMessage, {quoted:mek})
 break
 
 
-
+*/
 
 
  case 'ttnowm':
@@ -348,7 +348,7 @@ break
     conn.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: m })
    
   break
-  
+  /*
 case 'ttaud':
 	
 	
