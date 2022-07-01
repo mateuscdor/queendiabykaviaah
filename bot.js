@@ -267,7 +267,7 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 					
 
 
-/*case 'tiktok':{
+/*case 'tiktok':
   	
   if (!q) return reply('Where is the link?')
   reply("idqpn tikak")
@@ -291,13 +291,13 @@ buttons: buttons,
 headerType: 4
 }
 conn.sendMessage(from, buttonMessage, {quoted:mek})
-}
+
 break*/
 
 
 
 
-case 'tiktok':{
+case 'tiktok':
   	
   if (!q) return reply('Where is the link?')
   reply("Downloading")
@@ -327,14 +327,14 @@ buttons: buttons,
 headerType: 4
 }
 conn.sendMessage(from, buttonMessage, {quoted:mek})
-}
+
 break
 
 
 
 /*
 
- case 'ttnowm':{
+ case 'ttnowm':
   	
 	
   if (!q) return reply('Where is the link?')
@@ -346,10 +346,10 @@ break
  
    const xeonytiktoknowm = result.result.nowatermark
     conn.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: m })
-   }
+   
   break
   
-case 'ttaud':{
+case 'ttaud':
 	
 	
   if (!q) return reply('Where is the audio?')
@@ -360,12 +360,12 @@ case 'ttaud':{
  
    const xeonytiktokaudio = result.result.nowatermark
     conn.sendMessage(from, { audio: { url: xeonytiktokaudio }, mimetype: 'audio/mp4' }, { quoted: m })
-   }
+   
  break
  
  
  
-case 'ttwm':{
+case 'ttwm':
   	
 	
   if (!q) return reply('Where is the link?')
@@ -377,11 +377,11 @@ case 'ttwm':{
  
    const xeonytiktoknowm = result.result.watermark
     conn.sendMessage(from, { video: { url: xeonytiktoknowm }, caption: "Here you go!" }, { quoted: m })
-   }
+   
   break
   
 
-					
+				*/	
 					
 case 'devil':
 
@@ -401,7 +401,7 @@ lusifarapi.textpro("https://textpro.me/create-neon-devil-wings-text-effect-onlin
     });
 break
 					
-		*/			
+					
 					
 case 'wolf':
 
