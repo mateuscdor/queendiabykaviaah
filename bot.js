@@ -277,6 +277,33 @@ lusifarapi.textpro("https://textpro.me/create-neon-devil-wings-text-effect-onlin
         }
     });
 break
+					
+					
+					
+case 'wolf':
+
+
+    var topText, bottomText;
+    if (q.includes('/')) {
+        var split = q.split('/');
+        topText = split[0];
+        bottomText = split[1];
+    } else {
+        topText = q ;
+        bottomText = '';
+    }
+    lusifarapi.textpro("https://textpro.me/create-wolf-logo-galaxy-online-936.html", [`${topText}`, `${bottomText}`]).then(async(data) => {
+        try {
+        
+           
+            await conn.sendMessage(from ,{ image: { url : data }  , caption: config.CAPTION } , { quoted: mek })
+
+
+        } catch (err) {
+                    await conn.sendMessage(from , { text: cantfind}, { quoted: mek } )
+        }
+    });
+break					
 //++++++++++++++++++++++++++++++++++++++++++++++UPDATE END+++++++++++++++++++++++++++++++++++++++++++++++++++				
 				        case 'song' : 
 					song(  conn , mek , q)
