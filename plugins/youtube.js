@@ -10,8 +10,12 @@ const prefix = '.'
 async function song( conn , mek , name ) {
 const from = mek.key.remoteJid
 if (!name) return await conn.sendMessage(from , { text: Lang.N_SONG }, { quoted: mek } )
-  await conn.sendMessage(from ,{ image: { url : 'https://telegra.ph/file/3217c19d381ae34b38012.jpg' } , caption: config.CAPTION } , { quoted: mek })
-let ytmsg = await ytinfo(name)
+  
+  
+  await conn.sendMessage(from ,{ image: { url : 'https://telegra.ph/file/3217c19d381ae34b38012.jpg' } , jpegThumbnail: 'https://telegra.ph/file/3217c19d381ae34b38012.jpg' , caption: config.CAPTION } , { quoted: mek })
+
+  
+  let ytmsg = await ytinfo(name)
 if (!ytmsg.thumbnail) {
 await conn.sendMessage(from , { text: Lang.NOT_song }, { quoted: mek } )
 } else {
