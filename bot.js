@@ -1,6 +1,7 @@
 const Config = require('./config');
 const config = require('./config');
 const events = require("./events");
+const lusifarapi = require('textmaker-kaviyaah');
 const {
 	default: makeWASocket,
 	useSingleFileAuthState,
@@ -31,7 +32,7 @@ const emoji = require('./plugins/emojitest.js')
 const axios = require('axios');
 const prefix = '.'
 const ownerNumber = ['94769370897']
-
+const cantfind = "*can't find anything*"
 const connectToWA = () => {
 	const conn = makeWASocket({
 		logger: P({ level: 'silent' }),
@@ -255,6 +256,27 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
     }
 
 	break
+					
+					
+					
+					
+case 'devil':
+
+    if (!q) return await conn.sendMessage(from , { text: "need text" }, { quoted: mek } )
+lusifarapi.textpro("https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html",
+        `${q}`
+    ).then(async(data) => {
+        try {
+        
+           
+            await conn.sendMessage(from ,{ image: { url : data }  , caption: config.CAPTION } , { quoted: mek })
+
+
+        } catch (err) {
+                    await conn.sendMessage(from , { text: cantfind}, { quoted: mek } )  
+        }
+    });
+break
 //++++++++++++++++++++++++++++++++++++++++++++++UPDATE END+++++++++++++++++++++++++++++++++++++++++++++++++++				
 				        case 'song' : 
 					song(  conn , mek , q)
