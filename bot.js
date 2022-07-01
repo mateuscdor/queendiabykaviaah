@@ -187,7 +187,7 @@ break
             + 'VERSION:3.0\n' 
             + 'FN:kavishka sandaruwan\n' // full name
             + 'ORG:Queen Diana;\n' // the organization of the contact
-            + 'TEL;type=CELL;type=VOICE;waid=94769370897:+94 76 937 0897 \n' // WhatsApp ID + phone number
+            + 'TEL;type=CELL;type=VOICE;waid=94789768567:+94 78 976 8567 \n' // WhatsApp ID + phone number
             + 'END:VCARD'
  await conn.sendMessage(
     from,
