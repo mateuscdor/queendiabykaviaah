@@ -276,7 +276,7 @@ console.log(diaresult)
  conn.sendMessage(from , { text: diaresult }, { quoted: mek } )
  
  break				
-
+/*
  case 'facebook':
 if (!q) return reply('Need a facebook video link')
   
@@ -300,13 +300,57 @@ const bfbuttons = [  {buttonId: `.qdianafbsd ${diaqsdvideo}`, buttonText: {displ
                                    headerType: 1 
                                    } 
           
-  /*conn.sendMessage(from , { text: `sd quality video \n \n  ${diaqsdvideo}` }, { quoted: mek } )
+  conn.sendMessage(from , { text: `sd quality video \n \n  ${diaqsdvideo}` }, { quoted: mek } )
   conn.sendMessage(from , { text: `hd quality video \n \n  ${diaqhdvideo}` }, { quoted: mek } )
-      */
+      
+        conn.sendMessage(from, bfbuttonMessage, {quoted:mek})
+
+break
+*/
+
+case 'facebook':
+
+if (!q) return reply('Need a facebook video link')
+ 
+   const bfbuttons = [  {buttonId: `.qdianafbsd ${q}`, buttonText: {displayText: 'SD'}, type: 1}, 
+                         {buttonId: `.qdianafbhd ${q}`, buttonText: {displayText: 'HD'}, type: 1} ] 
+          
+          
+          const bfbuttonMessage = { 
+          
+                                   text: "SELECT YOUR FACEBOOK VIDEO QUALITY YOU WANT\n\n\n", 
+                                   footer: 'Queen Diana',
+                                   buttons: bfbuttons, 
+                                   headerType: 1 
+                                   } 
+   
         conn.sendMessage(from, bfbuttonMessage, {quoted:mek})
 
 break
 
+case 'qdianafbsd':
+
+if (!q) return reply('Need a facebook video link')
+reply("downloading")
+const diafbjresult = await savefrom( `${q}` )
+var diaqhdvideo = diafbjresult.url[0].url
+var diaqsdvideo = diafbjresult.url[1].url
+reply("uploding")
+await conn.sendMessage(from ,{ video: { url : diaqsdvideo }  , caption: config.CAPTION } , { quoted: mek })
+
+break
+
+case 'qdianafbhd':
+
+if (!q) return reply('Need a facebook video link')
+reply("downloading")
+const dianafbjresult = await savefrom( `${q}` )
+var dianaqhdvideo = dianafbjresult.url[0].url
+var dianaqsdvideo = dianafbjresult.url[1].url
+reply("uploading")
+await conn.sendMessage(from ,{ video: { url : dianaqhdvideo }  , caption: config.CAPTION } , { quoted: mek })
+
+break
 					
 //=======================================================================					
 
