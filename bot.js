@@ -182,7 +182,7 @@ break
 case 'mfire': 
 	
 if (!q) return reply("need url")
-if (!isUrl(args[0]) && !args[0].includes('mediafire.com')) return reply(`The link you provided is invalid`)
+//if (!isUrl(args[0]) && !args[0].includes('mediafire.com')) return reply(`The link you provided is invalid`)
 const baby1 = await mediafireDl(q)
 if (baby1[0].size.split('MB')[0] >= 999) return reply('*File Over Limit* '+util.format(baby1))
 const resuldiat4 = `*MEDIAFIRE DOWNLOADER*
