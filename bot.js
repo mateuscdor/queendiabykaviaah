@@ -283,8 +283,8 @@ if (!q) return reply('Need a facebook video link')
   
   
   const diafbjresult = await savefrom( `${q}` )
-var diaqsdvideo = diafbjresult.url[0].url
-var diaqhdvideo = diafbjresult.url[1].url
+var diaqhdvideo = diafbjresult.url[0].url
+var diaqsdvideo = diafbjresult.url[1].url
 
  /* 
   
