@@ -288,22 +288,22 @@ var diaqsdvideo = diafbjresult.url[1].url
 
  
   
-const buttons = [  {buttonId: `.qdianafbsd ${diaqsdvideo}`, buttonText: {displayText: 'SD'}, type: 1}, 
+const bfbuttons = [  {buttonId: `.qdianafbsd ${diaqsdvideo}`, buttonText: {displayText: 'SD'}, type: 1}, 
                    {buttonId: `.qdianafbhd ${diaqhdvideo}`, buttonText: {displayText: 'HD'}, type: 1} ] 
           
           
-          const buttonMessage = { 
+          const bfbuttonMessage = { 
           
                                    text: "SELECT YOUR FACEBOOK VIDEO QUALITY YOU WANT\n\n\n", 
                                    footer: 'Queen Diana',
-                                   buttons: buttons, 
+                                   buttons: bfbuttons, 
                                    headerType: 1 
                                    } 
           
   /*conn.sendMessage(from , { text: `sd quality video \n \n  ${diaqsdvideo}` }, { quoted: mek } )
   conn.sendMessage(from , { text: `hd quality video \n \n  ${diaqhdvideo}` }, { quoted: mek } )
       */
-        conn.sendMessage(from, buttonMessage, {quoted:mek})
+        conn.sendMessage(from, bfbuttonMessage, {quoted:mek})
 
 break
 
