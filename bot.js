@@ -279,7 +279,7 @@ console.log(diaresult)
 
  case 'facebook':
 if (!q) return reply('Need a facebook video link')
-  if (!q.includes('facebook')) return reply(`That's not a tiktok link!`)
+  
   
   
   const diafbjresult = await savefrom( `${q}` )
