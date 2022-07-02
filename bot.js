@@ -27,6 +27,7 @@ const setvar = require('./plugins/heroku')
 const { updiana , fixdiana } = require('./plugins/aupdater')
 const Language = require('./language');
 const Lang = Language.getString('updater');
+const { mediafireDl } = require('./lib/mediafire.js')
 
 
 
@@ -176,6 +177,25 @@ case 'alive':
 alive(conn ,mek )
 
 break
+
+
+case 'mfire': 
+	
+if (!q) return reply("need url")
+if (!isUrl(args[0]) && !args[0].includes('mediafire.com')) return reply(`The link you provided is invalid`)
+const baby1 = await mediafireDl(q)
+if (baby1[0].size.split('MB')[0] >= 999) return reply('*File Over Limit* '+util.format(baby1))
+const resuldiat4 = `*MEDIAFIRE DOWNLOADER*
+				
+*Name* : ${baby1[0].nama}
+*Size* : ${baby1[0].size}
+*Mime* : ${baby1[0].mime}
+*Link* : ${baby1[0].link}`
+reply(`${resuldiat4}`)
+conn.sendMessage(from, { document : { url : baby1[0].link}, fileName : baby1[0].nama, mimetype: baby1[0].mime }, { quoted : mek }).catch ((err) => reply("error🥲"))
+
+break
+
 					
 					
 	case 'menu':	
