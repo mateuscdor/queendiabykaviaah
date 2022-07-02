@@ -336,7 +336,7 @@ const diafbjresult = await savefrom( `${q}` )
 var diaqhdvideo = diafbjresult.url[0].url
 var diaqsdvideo = diafbjresult.url[1].url
 reply("uploding")
-await conn.sendMessage(from ,{ video: { url : diaqsdvideo }  , caption: config.CAPTION } , { quoted: mek })
+conn.sendMessage(from ,{ video: { url : diaqsdvideo }  , caption: config.CAPTION } , { quoted: mek })
 
 break
 
@@ -348,7 +348,7 @@ const dianafbjresult = await savefrom( `${q}` )
 var dianaqhdvideo = dianafbjresult.url[0].url
 var dianaqsdvideo = dianafbjresult.url[1].url
 reply("uploading")
-await conn.sendMessage(from ,{ video: { url : dianaqhdvideo }  , caption: config.CAPTION } , { quoted: mek })
+conn.sendMessage(from ,{ video: { url : dianaqhdvideo }  , caption: config.CAPTION } , { quoted: mek })
 
 break
 					
