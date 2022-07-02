@@ -260,11 +260,7 @@ await conn.sendMessage(conn.user.id, buttonMessage)
 			switch (command) {
 
 
-fs.readdirSync('./plugins').forEach(plugin => {
-                if(path.extname(plugin).toLowerCase() == '.js') {
-                    require('./plugins/' + plugin);
-                }
-            });
+
 
 
 case 'alive':
