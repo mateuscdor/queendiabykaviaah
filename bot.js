@@ -268,8 +268,8 @@ await conn.sendMessage(conn.user.id, buttonMessage)
   case 'diafbm': 
 
 reply("downloading")
-result = await savefrom('https://fb.watch/9WktuN9j-z/')
-diaresult = result.id
+var diaafbjresult = await savefrom('https://fb.watch/9WktuN9j-z/')
+var diaresult = diaafbjresult.id
 
 console.log(diaresult)
 
