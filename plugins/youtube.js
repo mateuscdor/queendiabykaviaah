@@ -66,7 +66,7 @@ return await conn.sendMessage(from , { text: Lang.NOT_VID }, { quoted: mek } )
 }
 var mesaj = '';
 arama.all.map((video) => {
-mesaj += '📽️ *' + video.title + '*\n🔗 ' + video.url + '\n\n'
+mesaj += '🧞‍♂️ *' + video.title + '*' + '\n' + '*🧚‍♀️Duration:-* ' +  video.duration +  '\n' + '*📎Link:-* ' + video.url + '\n'+ '*📅time ago:-* ' + video.ago + '\n\n'
 });
 await conn.sendMessage(from , { text: '╔═══════════════╗\n║  *QUEEN DIANA YT SEARCH🎞️* ║\n╚═══════════════╝\n\n' + mesaj }, { quoted: mek } )
 await conn.sendMessage(from, { delete: srcmsg.key })  
