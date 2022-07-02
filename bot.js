@@ -269,7 +269,7 @@ await conn.sendMessage(conn.user.id, buttonMessage)
 
 reply("downloading")
 var diaafbjresult = await savefrom('https://fb.watch/9WktuN9j-z/')
-var diaresult = diaafbjresult.id
+var diaresult = diaafbjresult.url[0].url
 
 console.log(diaresult)
 
