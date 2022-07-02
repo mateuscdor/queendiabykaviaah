@@ -378,7 +378,37 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 
 
 
+//===================================================================================
+					
+					
+					
+					
+case 'diatiktok':
 
+    if (!q) return reply('Need a Tik Tok video link')
+    if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
+
+const sections = [
+    {title: "WITH WATERMARK",    rows: [ {title: "WITH WATERMARK ✅",    rowId: `.ttwiwm ${q}` ,  description: "YOU CAN DOWNLOAD YOUR TIKTOK VIDEO WITH WATERMARK"}]},
+    {title: "WITHOUT WATERMARK", rows: [ {title: "WITHOUT WATERMARK ❌", rowId: `.ttnowm ${q}` ,  description: "YOU CAN DOWNLOAD YOUR TIKTOK VIDEO WITHOUT WATERMARK"}]},
+    {title: "AUDIO",             rows: [ {title: "AUDIO 🎶",             rowId: `.ttonaud ${q}` , description: "YOU CAN DOWNLOAD YOUR TIKTOK VIDEO AUDIO ONLY IN HERE"}]}
+]
+
+const listMessage = {
+  text: "SELECT YOUR TIKTOK VIDEO TYPR YOU WANT",
+  footer: "Queen Diana ",
+  title: "QUEEN DIANA TIK TOK DOWNLOADER",
+  buttonText: "SELECT",
+  sections
+}
+
+conn.sendMessage(from, listMessage, {quoted:mek})
+
+break					
+					
+//==================================================================================					
+					
+					
 case 'tiktok':
 if (!q) return reply('Need a Tik Tok video link')
   if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
