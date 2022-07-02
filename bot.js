@@ -380,48 +380,23 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 
 //===================================================================================
 					
+		
 					
-					
-					
-case 'diatiktok':
-
-    if (!q) return reply('Need a Tik Tok video link')
-    if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
-
-const sections = [
-    {title: "WITH WATERMARK",    rows: [ {title: "WITH WATERMARK ✅",    rowId: `.ttwiwm ${q}` ,  description: "YOU CAN DOWNLOAD YOUR TIKTOK VIDEO WITH WATERMARK"}]},
-    {title: "WITHOUT WATERMARK", rows: [ {title: "WITHOUT WATERMARK ❌", rowId: `.ttnowm ${q}` ,  description: "YOU CAN DOWNLOAD YOUR TIKTOK VIDEO WITHOUT WATERMARK"}]},
-    {title: "AUDIO",             rows: [ {title: "AUDIO 🎶",             rowId: `.ttonaud ${q}` , description: "YOU CAN DOWNLOAD YOUR TIKTOK VIDEO AUDIO ONLY IN HERE"}]}
-]
-
-const listMessage = {
-  text: "SELECT YOUR TIKTOK VIDEO TYPR YOU WANT",
-  footer: "Queen Diana ",
-  title: "QUEEN DIANA TIK TOK DOWNLOADER",
-  buttonText: "SELECT",
-  sections
-}
-
-conn.sendMessage(from, listMessage, {quoted:mek})
-
-break					
-					
-//==================================================================================					
 					
 					
 case 'tiktok':
 if (!q) return reply('Need a Tik Tok video link')
   if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
   
-const buttons = [ {buttonId: `.ttwiwm ${q}`, buttonText: {displayText: 'With water mark'}, type: 1}, 
-                   {buttonId: `.ttnowm ${q}`, buttonText: {displayText: 'Without water mark'}, type: 1}, 
-                   {buttonId: `.ttonaud ${q}`, buttonText: {displayText: 'Audio Only'}, type: 1} ] 
+const buttons = [ {buttonId: `.ttwiwm ${q}`, buttonText: {displayText: '"WITH WATERMARK ✅'}, type: 1}, 
+                   {buttonId: `.ttnowm ${q}`, buttonText: {displayText: 'WITHOUT WATERMARK ❌'}, type: 1}, 
+                   {buttonId: `.ttonaud ${q}`, buttonText: {displayText: '"AUDIO 🎶'}, type: 1} ] 
           
           
           const buttonMessage = { 
           
-                                   text: "Select your choice in here\n\n\n", 
-                                   footer: 'QUEEN DIANA',
+                                   text: "SELECT YOUR TIKTOK VIDEO TYPR YOU WANT\n\n\n", 
+                                   footer: 'Queen Diana',
                                    buttons: buttons, 
                                    headerType: 1 
                                    } 
@@ -475,7 +450,7 @@ case 'ttwiwm':
     conn.sendMessage(from, { video: { url: diatiktokwiwm }, caption: "Here you go!" }, { quoted: mek })
    
   break
-					
+//==================================================================================					
 case 'devil':
 
     if (!q) return await conn.sendMessage(from , { text: "need text" }, { quoted: mek } )
