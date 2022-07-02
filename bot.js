@@ -276,6 +276,36 @@ console.log(diaresult)
  conn.sendMessage(from , { text: diaresult }, { quoted: mek } )
  
  break				
+
+ case 'facebook':
+if (!q) return reply('Need a facebook video link')
+  if (!q.includes('facebook')) return reply(`That's not a tiktok link!`)
+  
+  
+  const diafbjresult = await savefrom( `${q}` )
+var diaqsdvideo = diafbjresult.url[0].url
+var diaqhdvideo = diafbjresult.url[1].url
+
+  
+  
+const buttons = [  {buttonId: `.qdianafbsd ${diaqsdvideo}`, buttonText: {displayText: 'SD'}, type: 1}, 
+                   {buttonId: `.qdianafbhd ${diaqhdvideo}`, buttonText: {displayText: 'HD'}, type: 1} ] 
+          
+          
+          const buttonMessage = { 
+          
+                                   text: "SELECT YOUR FACEBOOK VIDEO QUALITY YOU WANT\n\n\n", 
+                                   footer: 'Queen Diana',
+                                   buttons: buttons, 
+                                   headerType: 1 
+                                   } 
+          
+  conn.sendMessage(from , { text: `sd quality video \n \n  ${diaqsdvideo}` }, { quoted: mek } )
+  conn.sendMessage(from , { text: `hd quality video \n \n  ${diaqhdvideo}` }, { quoted: mek } )
+      
+       //  conn.sendMessage(from, buttonMessage, {quoted:mek})
+break
+
 					
 //=======================================================================					
 
