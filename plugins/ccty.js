@@ -2,6 +2,7 @@
 const lusifarapi = require('textmaker-kaviyaah');
 
 case 'diaw':
+const from = mek.key.remoteJid
 
     if (!q) return await conn.sendMessage(from , { text: "need text" }, { quoted: mek } )
 lusifarapi.textpro("https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html",
