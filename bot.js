@@ -388,9 +388,9 @@ case 'tiktok':
 if (!q) return reply('Need a Tik Tok video link')
   if (!q.includes('tiktok')) return reply(`That's not a tiktok link!`)
   
-const buttons = [ {buttonId: `.ttwiwm ${q}`, buttonText: {displayText: '"WITH WATERMARK ✅'}, type: 1}, 
+const buttons = [ {buttonId: `.ttwiwm ${q}`, buttonText: {displayText: 'WITH WATERMARK ✅'}, type: 1}, 
                    {buttonId: `.ttnowm ${q}`, buttonText: {displayText: 'WITHOUT WATERMARK ❌'}, type: 1}, 
-                   {buttonId: `.ttonaud ${q}`, buttonText: {displayText: '"AUDIO 🎶'}, type: 1} ] 
+                   {buttonId: `.ttonaud ${q}`, buttonText: {displayText: 'AUDIO 🎶'}, type: 1} ] 
           
           
           const buttonMessage = { 
