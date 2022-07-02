@@ -51,7 +51,7 @@ const { XeonBotIncTiktok } = require('./lib/tiktokbyxeon');
 
 
 
-
+let bocil = require('@bochilteam/scraper')  
 const emoji = require('./plugins/emojitest.js')
 const axios = require('axios');
 const prefix = '.'
@@ -295,7 +295,29 @@ await conn.sendMessage(conn.user.id, buttonMessage)
 
  break
 					
-					
+case 'fbdl':     	    
+     			
+ 
+              if (!q) return reply(`Where is the link bro?\nExample: ${prefix}facebook https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
+
+             
+                 bocil.facebookdlv2(`${q}`).then(async (data) => {                   
+                     let txt = `*FB DOWNLOADER*\n\n`
+                     txt += `*${themeemoji}TITLE :* ${data.title}\n`
+                     txt += `*${themeemoji}QUALITY :* ${data.result[0].quality}\n`
+                     txt += `*${themeemoji}DESCRIPTION :* ${data.description}\n`
+                     txt += `*${themeemoji}ID :* ${watermark}\n`
+                     txt += `*${themeemoji}URL :* ${q}\n\n`
+                 buf = await getBuffer(data.thumbnail)    
+                 conn.sendMessage(from, { image: { url: data.thumbnail }, jpegThumbnail:buf, caption: `${txt}` }, { quoted: mek })         
+                  for (let i of data.result) {     
+                 conn.sendMessage(from, { video: { url: i.url }, jpegThumbnail:buf, caption: `*${themeemoji} Quality :* ${i.quality}`}, { quoted: mek })
+                 }          
+                 }).catch((err) => {
+                     reply("ERROR!")
+                 })
+             
+             break					
 					
 //=======================================================================					
 
