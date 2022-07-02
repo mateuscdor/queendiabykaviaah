@@ -286,7 +286,7 @@ if (!q) return reply('Need a facebook video link')
 var diaqhdvideo = diafbjresult.url[0].url
 var diaqsdvideo = diafbjresult.url[1].url
 
- /* 
+ 
   
 const buttons = [  {buttonId: `.qdianafbsd ${diaqsdvideo}`, buttonText: {displayText: 'SD'}, type: 1}, 
                    {buttonId: `.qdianafbhd ${diaqhdvideo}`, buttonText: {displayText: 'HD'}, type: 1} ] 
@@ -298,13 +298,13 @@ const buttons = [  {buttonId: `.qdianafbsd ${diaqsdvideo}`, buttonText: {display
                                    footer: 'Queen Diana',
                                    buttons: buttons, 
                                    headerType: 1 
-                                   } */
+                                   } 
           
-  conn.sendMessage(from , { text: `sd quality video \n \n  ${diaqsdvideo}` }, { quoted: mek } )
+  /*conn.sendMessage(from , { text: `sd quality video \n \n  ${diaqsdvideo}` }, { quoted: mek } )
   conn.sendMessage(from , { text: `hd quality video \n \n  ${diaqhdvideo}` }, { quoted: mek } )
-      
-       /*/  conn.sendMessage(from, buttonMessage, {quoted:mek})
-*/
+      */
+        conn.sendMessage(from, buttonMessage, {quoted:mek})
+
 break
 
 					
