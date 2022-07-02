@@ -30,7 +30,21 @@ const Language = require('./language');
 const Lang = Language.getString('updater');
 const { mediafireDl } = require('./lib/mediafire.js')
 
+//================================
+const path = require("path");
 
+const chalk = require('chalk');
+
+
+
+const {Message, StringSession, Image, Video} = require('./DIANA/');
+const { DataTypes } = require('sequelize');
+const { getMessage } = require("./plugins/sql/greetings");
+
+const axios = require('axios');
+const got = require('got');
+
+//=====================================
 
 const { XeonBotIncTiktok } = require('./lib/tiktokbyxeon');
 
