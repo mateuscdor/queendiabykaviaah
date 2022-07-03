@@ -30,7 +30,7 @@ const Language = require('./language');
 const Lang = Language.getString('updater');
 const { mediafireDl } = require('./lib/mediafire.js')
 const { aiovideodl } = require('./lib/fbdl.js')
-const ytinfo = require('../lib/ytinfo');
+const ytinfo = require('./lib/ytinfo');
 //================================
 const path = require("path");
 
