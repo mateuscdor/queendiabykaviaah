@@ -420,18 +420,18 @@ await axios
 .get(`https://pastebin.pl/view/raw/a24ebfd4`)
 .then(async(response) => {
     const {
-        text
+        meta
     } = response.data
 
-    const updatetext = text
+    const updatetext = meta.text
 
     let buttons = [
-        {buttonId: `${prefix}owner`, buttonText: {displayText: '⫷ OWNER ⫸'}, type: 1},
-        {buttonId: `${prefix}alive`, buttonText: {displayText: '⫷ ALIVE ⫸'}, type: 1}]
+        {buttonId: `.owner`, buttonText: {displayText: '⫷ OWNER ⫸'}, type: 1},
+        {buttonId: `.alive`, buttonText: {displayText: '⫷ ALIVE ⫸'}, type: 1}]
     let buttonMessage = {
         image: { url: 'https://i.ibb.co/FKJvwZ3/20220703-093716.jpg'},
     caption: updatetext ,
-    footer: {text: '◉ ʀᴇᴅ-ᴅʀᴀɢᴏɴ-ʙᴏᴛ MD'},
+    footer: '◉ ʀᴇᴅ-ᴅʀᴀɢᴏɴ-ʙᴏᴛ MD',
     buttons,
     headerType: 4
     }
