@@ -130,8 +130,18 @@ const connectToWA = () => {
 
 
             console.log(
-                chalk.blueBright.italic('⬇️  Installing plugins...')
-            );
+                chalk.blueBright.italic('⬇️  Installing plugins...'));
+
+
+
+                fs.readdirSync('./plugins').forEach(plugin => {
+                    if(path.extname(plugin).toLowerCase() == '.js') {
+                        require('./plugins/' + plugin);
+                    }
+                });
+
+
+
             console.log(
                 chalk.green.bold('👸𝚀𝚄𝙴𝙴𝙽 𝙳𝙸𝙰𝙽𝙰👸 𝚠𝚘𝚛𝚔𝚒𝚗𝚐 ' + config.WORKTYPE + ' 𝚗𝚘𝚠 👻'));
     
