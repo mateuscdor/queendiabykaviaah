@@ -342,7 +342,7 @@ await conn.sendMessage(conn.user.id, buttonMessage)
                 }
             }
         )
-    });
+   
 			
 			
 			switch (command) {
