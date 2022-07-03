@@ -1,4 +1,4 @@
-
+/*
 const lusifarapi = require('textmaker-kaviyaah');
 
 case 'diaw':
@@ -20,3 +20,17 @@ lusifarapi.textpro("https://textpro.me/create-neon-devil-wings-text-effect-onlin
     });
 break
 	
+*/
+
+
+
+const events = require("../events");
+
+
+events.cmd({ name : 'diabtest' , desc : 'nothing'}  , ( async (conn , mek , q) => {
+  const from = mek.key.remoteJid
+  await conn.sendMessage(from, { text: 'hi hello' }, { quoted: mek }) 
+} 
+           
+))
+    
