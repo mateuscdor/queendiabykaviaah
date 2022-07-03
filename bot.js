@@ -481,7 +481,28 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 
 //===================================================================================
 					
-		
+	//=========================================================================================	
+case 'diakil':
+
+if (!q) return await conn.sendMessage(from , { text: "hhgjh" }, { quoted: mek } )
+  
+  
+
+
+  
+  let ytmsg = await ytinfo(q)
+if (!ytmsg.thumbnail) {
+await conn.sendMessage(from , { text: "daaaaaaaaaaaaaaaaaaaaa" }, { quoted: mek } )
+} else {
+const songdiabuttons = [
+{buttonId: prefix +'diabtest ' + ytmsg.yuturl, buttonText: {displayText: 'DOCUMENT'}, type: 1},
+{buttonId: prefix +'diabtest ' + ytmsg.yuturl, buttonText: {displayText: 'AUDIO'}, type: 1},
+]
+await conn.sendMessage(from, { image: {url: ytmsg.thumbnail  }, caption: ytmsg.songmsg , footer: config.FOOTER , buttons: songdiabuttons , headerType: 4} , { quoted: mek } )				
+}
+
+break
+
 					
 					
 					
