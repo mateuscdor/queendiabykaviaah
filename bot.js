@@ -490,34 +490,7 @@ break
 					
 					
 					
-case 'hui':  {
-
-await axios 
-.get(`https://pastebin.pl/view/raw/a24ebfd4`)
-.then(async(response) => {
-    const {
-        meta
-    } = response
-
-    const updatetext = meta.text
-
-    let buttons = [
-        {buttonId: `.owner`, buttonText: {displayText: '⫷ OWNER ⫸'}, type: 1},
-        {buttonId: `.alive`, buttonText: {displayText: '⫷ ALIVE ⫸'}, type: 1}]
-    let buttonMessage = {
-        image: { url: 'https://i.ibb.co/FKJvwZ3/20220703-093716.jpg'},
-    caption: updatetext ,
-    footer: '◉ ʀᴇᴅ-ᴅʀᴀɢᴏɴ-ʙᴏᴛ MD',
-    buttons,
-    headerType: 4
-    }
-    conn.sendMessage(from, buttonMessage, { quoted: mek })
-   
-          
-})
-
-}
-break					
+				
 //================================================UPDATE=====================================================					
 				case 'updatenow' :	
 
