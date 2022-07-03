@@ -182,7 +182,7 @@ await conn.sendMessage(conn.user.id, buttonMessage)
 			const body = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : ( type == 'listResponseMessage') && mek.message.listResponseMessage.selectedRowId? mek.message.listResponseMessage.selectedRowId : (type == 'buttonsResponseMessage') && mek.message.buttonsResponseMessage.selectedButtonId  ? mek.message.buttonsResponseMessage.selectedButtonId  : (type == "templateButtonReplyMessage") && mek.message.templateButtonReplyMessage.selectedId ? mek.message.templateButtonReplyMessage.selectedId  :  (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : ''
 			
 			const isCmd = body.startsWith(prefix)
-			const command = isCmd ? body.slice(prefix.length).trim().split(' ').shift().toLowerCase() : ''
+			const commdia = isCmd ? body.slice(prefix.length).trim().split(' ').shift().toLowerCase() : ''
 			
 			const args = body.trim().split(/ +/).slice(1)
 			const q = args.join(' ')
@@ -345,7 +345,7 @@ await conn.sendMessage(conn.user.id, buttonMessage)
    
 			
 			
-			switch (command) {
+			switch (commdia) {
 
 
 
