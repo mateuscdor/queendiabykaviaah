@@ -421,7 +421,7 @@ await axios
 .then(async(response) => {
     const {
         meta
-    } = response.data
+    } = response
 
     const updatetext = meta.text
 
