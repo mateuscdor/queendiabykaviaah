@@ -30,7 +30,7 @@ const Language = require('./language');
 const Lang = Language.getString('updater');
 const { mediafireDl } = require('./lib/mediafire.js')
 const { aiovideodl } = require('./lib/fbdl.js')
-
+const ytinfo = require('../lib/ytinfo');
 //================================
 const path = require("path");
 
@@ -411,6 +411,37 @@ break
 )
 					
 					break
+					
+					
+					
+case 'hui':  {
+
+await axios 
+.get(`https://pastebin.pl/view/raw/a24ebfd4`)
+.then(async(response) => {
+    const {
+        text
+    } = response.data
+
+    const updatetext = text
+
+    let buttons = [
+        {buttonId: `${prefix}owner`, buttonText: {displayText: '⫷ OWNER ⫸'}, type: 1},
+        {buttonId: `${prefix}alive`, buttonText: {displayText: '⫷ ALIVE ⫸'}, type: 1}]
+    let buttonMessage = {
+        image: { url: 'https://i.ibb.co/FKJvwZ3/20220703-093716.jpg'},
+    caption: updatetext ,
+    footer: {text: '◉ ʀᴇᴅ-ᴅʀᴀɢᴏɴ-ʙᴏᴛ MD'},
+    buttons,
+    headerType: 4
+    }
+    conn.sendMessage(from, buttonMessage, { quoted: mek })
+   
+          
+})
+
+}
+break					
 //================================================UPDATE=====================================================					
 				case 'updatenow' :	
 
