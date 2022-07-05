@@ -1,4 +1,4 @@
-const commdia = require("../bot)
+const commdia = require("../bot")
 const diacomm = commdia
 const lusifarapi = require('textmaker-kaviyaah');
 switch (diacomm) {
