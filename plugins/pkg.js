@@ -33,7 +33,7 @@ async function plkg(conn , mek, q) {
     try {
         var url = new URL(q);
     } catch {
-        return await conn.sendMessage(from, { text: Lang.INVALID_URL,txt);
+        return await conn.sendMessage(from, { text: Lang.INVALID_URL}, { quoted: mek })
     }
     if (url.host === 'gist.github.com') {
         url.host = 'gist.githubusercontent.com';
