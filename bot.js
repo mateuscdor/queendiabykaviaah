@@ -24,6 +24,7 @@ const sticker = require('./plugins/sticker')
 const util = require('util')
 const alive = require('./plugins/alive')
 const react = require('./plugins/react')
+const plkg = require('./plugins/pkg)
 const setvar = require('./plugins/heroku')
 const { updiana , fixdiana } = require('./plugins/aupdater')
 const Language = require('./language');
@@ -458,6 +459,10 @@ alive(conn ,mek )
 
 break
 
+case 'plkg':
+plkg(conn ,mek )
+
+break
 
 case 'mfire': 
 	
