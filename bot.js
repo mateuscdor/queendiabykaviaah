@@ -343,7 +343,7 @@ await conn.sendMessage(conn.user.id, buttonMessage)
             }
         )
    
-			
+module.exports = commdia;			
 			
 			switch (commdia) {
 
@@ -767,7 +767,6 @@ connectToWA()
 
 
 
-module.exports = commdia;
 
 
 
