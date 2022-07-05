@@ -767,7 +767,7 @@ connectToWA()
 
 
 
-
+module.exports = commdia;
 
 
 
