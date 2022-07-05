@@ -128,6 +128,19 @@ const connectToWA = () => {
 		} else if (connection === 'open') {
 			console.log('conected')
 
+        console.log('⬇️ Installing external plugins...');
+
+        var plugins = await plugindb.PluginDB.findAll();
+        plugins.map(async (plugin) => {
+            if (!fs.existsSync('./plugins/' + plugin.dataValues.name + '.js')) {
+                console.log(plugin.dataValues.name);
+                var response = await got(plugin.dataValues.url);
+                if (response.statusCode == 200) {
+                    fs.writeFileSync('./plugins/' + plugin.dataValues.name + '.js', response.body);
+                    require('./plugins/' + plugin.dataValues.name + '.js');
+                }     
+            }
+        });
 
             console.log(
                 chalk.blueBright.italic('⬇️  Installing plugins...'));
