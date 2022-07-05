@@ -28,7 +28,7 @@ var LANG = {
 
 
 async function plkg(conn , mek, q) {
-
+const from = mek.key.remoteJid
     if (q == '') return await conn.sendMessage(from, { text: Lang.NEED_URL + '.install https://gist.github.com/kavishkaya/4232b1c8c4734e1f06c3d991149c6fbd'}, { quoted: mek })
     try {
         var url = new URL(q);
