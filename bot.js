@@ -717,6 +717,7 @@ case 'wolf':
 break					
 //++++++++++++++++++++++++++++++++++++++++++++++UPDATE END+++++++++++++++++++++++++++++++++++++++++++++++++++				
 				        case 'song' : 
+conn.sendMessage(from, { react: { text: `🎧`, key: mek.key }})
 					song(  conn , mek , q)
 					break
 				        case 'dsong' :
