@@ -34,7 +34,7 @@ const from = mek.key.remoteJid
         try {
         var url = new URL(match[1]);
     } catch {
-        return await conn.sendMessage(from, { text: Lang.INVALID_URL } , { qouted:mek }
+        return await conn.sendMessage(from, { text: Lang.INVALID_URL } , { qouted:mek })
     }
     
     if (url.host === 'gist.github.com') {
