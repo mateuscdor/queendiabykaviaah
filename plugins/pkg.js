@@ -31,7 +31,11 @@ async function plkg(conn , mek, q) {
 const from = mek.key.remoteJid
     if (q == '') return await conn.sendMessage(from, { text: Lang.NEED_URL + '.install https://gist.github.com/kavishkaya/4232b1c8c4734e1f06c3d991149c6fbd'}, { quoted: mek })
     
-        var url = new URL(q);
+        try {
+        var url = new URL(match[1]);
+    } catch {
+        return await message.client.sendMessage(message.jid,Lang.INVALID_URL,txt);
+    }
     
     if (url.host === 'gist.github.com') {
         url.host = 'gist.githubusercontent.com';
