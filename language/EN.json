@@ -40,7 +40,25 @@
                               "AFTER_UPDATE": "*💬 𝚀𝚄𝙴𝙴𝙽 𝙳𝙸𝙰𝙽𝙰 ʀᴇꜱᴛᴀʀᴛɪɴɢ ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ!*",
                               "IN_AF": "*Please check* ```HEROKU_APP_NAME``` *and* ```app name``` *They must be same.*\n*If these two values ​​are the same, please restore* ```HEROKU_API_KEY```\n\n_To access these settings, use Heroku >> App >> Settings >> Reavel Config Vars_\n_To renew your API key, follow these steps, Heroku >> Account >> API Key then replace old api key in config vars._"
                              },
-                "stic" : {
+        "_plugin": {
+            "INSTALL_DESC": "Install external plugins.",
+            "NEED_URL": "Please enter a URL! Example:",
+            "UNOFF": "⚠️ *Attention!* \n*The plugin you have installed is not official!*",
+            "INVALID_URL": "```Please enter a valid url!```",
+            "INVALID_PLUGIN": "*❌ Your plugin is invalid!*\n*Error:*",
+            "INSTALLED": "*✅ Plugin has been successfully installed!*",
+            "PLUGIN_DESC": "Shows the plugins you have installed.",
+            "INSTALLED_FROM_REMOTE": "*Plugins you install externally:*\n",
+            "NO_PLUGIN": "*You have not installed any external plugins!*",
+            "REMOVE_DESC": "Removes the plugin.",
+            "NEED_PLUGIN": "```Please enter a Plugin! Example: .plugin __test```",
+            "NOT_FOUND_PLUGIN": "```Maybe you have installed such a plugin, or maybe not. But it sure isn't right now.```",
+            "DELETED": "*✅ Module successfully deleted!*",
+            "WARN": "Get plugins only from t.me/remasterplugin channel."
+        },
+ 
+                
+                   "stic" : {
                               "NEED"   : "❌ ``` please mention an image or video```" ,
                               "C_STIC" : "```🧰creating sticker...```" ,
                               "N_STIC" : "❌ ``` Please mention a sticker.```" ,
