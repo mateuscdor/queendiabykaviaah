@@ -7,8 +7,8 @@ async function alive(conn , mek) {
 	if (config.ALIVEMSG == 'default') alivemsg = '```👋 ```Hey there, I\'m alive now```\n\n_Version:_ ```' + config.VERSION + '```\n\n_POWERED BY KAVIYAAH``` \n\n\n'
   if (!config.ALIVEMSG == 'default') alivemsg = config.ALIVEMSG
 const alivebuttond = [
-{buttonId: prefix +'menu ' + ytmsg.yuturl, buttonText: {displayText: 'MENU'}, type: 1},
-{buttonId: prefix +'owner ' + ytmsg.yuturl, buttonText: {displayText: 'OWNER'}, type: 1},
+{buttonId: prefix +'menu',  buttonText: {displayText: 'MENU'}, type: 1},
+{buttonId: prefix +'owner', buttonText: {displayText: 'OWNER'}, type: 1},
 ]
 await conn.sendMessage(from, { image: {url: config.ALIVE_LOGO  }, caption: alivemsg , footer: 'Queen Diana' , buttons: alivebuttond , headerType: 4} , { quoted: mek } )				
   }
