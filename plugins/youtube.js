@@ -1,7 +1,7 @@
 const config = require('../config');
 const yts = require( 'yt-search' )
 const { yt720 ,  yt480 ,  yt360 } = require('../lib/ytmp4');
-const ytmp3 = require('../lib/ytmp3');a
+const ytmp3 = require('../lib/ytmp3');
 const ytinfo = require('../lib/ytinfo');
 const Language = require('../language');
 const Lang = Language.getString('yt');
