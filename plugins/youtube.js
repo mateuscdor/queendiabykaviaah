@@ -1,4 +1,5 @@
 const config = require('../config');
+const fs = require('fs');
 const yts = require( 'yt-search' )
 const { yt720 ,  yt480 ,  yt360 } = require('../lib/ytmp4');
 const ytmp3 = require('../lib/ytmp3');
