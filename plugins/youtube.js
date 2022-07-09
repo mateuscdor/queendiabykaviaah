@@ -12,7 +12,7 @@ const from = mek.key.remoteJid
 if (!name) return await conn.sendMessage(from , { text: Lang.N_SONG }, { quoted: mek } )
   
   
-  //await conn.sendMessage(from ,{ image: { url : 'https://telegra.ph/file/3217c19d381ae34b38012.jpg' } , caption: config.CAPTION ,jpegThumbnail:diathumb} , { quoted: mek })
+  await conn.sendMessage(from ,{ image: { url : 'https://telegra.ph/file/3217c19d381ae34b38012.jpg' } , caption: config.CAPTION ,jpegThumbnail:diathumb} , { quoted: mek })
 
   
   let ytmsg = await ytinfo(name)
