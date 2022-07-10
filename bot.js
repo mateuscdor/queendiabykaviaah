@@ -31,7 +31,7 @@ const heroku = new Heroku({ token: Config.HEROKU.API_KEY })
 
 
 
-/*
+
 var bdianases = config.SESSION
 
  var REPSESSION = '';  try {if (bdianases.includes('DIANA;;;')) { var lastsesdia = bdianases.replace('DIANA;;;','') ; REPSESSION = lastsesdia }} catch{console.log('error')}
@@ -42,16 +42,22 @@ const tey = Buffer.from(base64, 'base64');
 const oridiases = tey.toString('utf-8');
  
  
- //console.log(oridiases);
- 
- 
- 
-//oridiases = b64utf8(REPSESSION);
-fs.writeFileSync('./diana/session.json' , oridiases )
+geturl = oridiases
+axios.get(`${geturl}`)
+  .then(response => {
+
+const sessiontest = response.data
+fs.writeFileSync('./diana/session.json' , sessiontest )
+
+    console.log(response.data); 
+  })
+
+
+
 console.log(`GETTING SESSION`)
 
 
-*/
+
 
 
 
@@ -68,7 +74,7 @@ console.log(`GETTING SESSION`)
 
 
 
-const { state, saveState } = useSingleFileAuthState('./session.json')
+const { state, saveState } = useSingleFileAuthState('./diana/session.json')
 const { song ,  asong ,  dsong , getyt , video , yt720p , yt480p , yt360p}  = require('./plugins/youtube');
 const { kick , add } = require('./plugins/admin')
 const sticker = require('./plugins/sticker')
