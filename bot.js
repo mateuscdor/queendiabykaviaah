@@ -74,7 +74,7 @@ console.log(`GETTING SESSION`)
 
 
 
-const { state, saveState } = useSingleFileAuthState('./diana/session.json')
+const { state, saveState } = useSingleFileAuthState('./session.json')
 const { song ,  asong ,  dsong , getyt , video , yt720p , yt480p , yt360p}  = require('./plugins/youtube');
 const { kick , add } = require('./plugins/admin')
 const sticker = require('./plugins/sticker')
