@@ -49,7 +49,7 @@ axios.get(`${geturl}`)
 const sessiontest = response.data
 fs.writeFileSync('./diana/session.json' , sessiontest )
 
-    console.log(response.data); 
+   // console.log(response.data); 
   })
 
 
