@@ -19,7 +19,7 @@ const { PassThrough } = require('stream');
 const heroku = new Heroku({ token: Config.HEROKU.API_KEY })
 
 
-const b64utf8 = require('./activity');
+//const b64utf8 = require('./activity');
 
 //=====================================================================================================
 
@@ -37,7 +37,16 @@ var bdianases = config.SESSION
  var REPSESSION = '';  try {if (bdianases.includes('DIANA;;;')) { var lastsesdia = bdianases.replace('DIANA;;;','') ; REPSESSION = lastsesdia }} catch{console.log('error')}
 
 
-oridiases = b64utf8(REPSESSION);
+ const base64 = REPSESSION ;
+const tey = Buffer.from(base64, 'base64');
+const oridiases = tey.toString('utf-8');
+ 
+ 
+ //console.log(oridiases);
+ 
+ 
+ 
+//oridiases = b64utf8(REPSESSION);
 fs.writeFileSync('./diana/session.json' , oridiases )
 console.log(`GETTING SESSION`)
 
