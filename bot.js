@@ -17,7 +17,7 @@ const exec = require('child_process').exec;
 const Heroku = require('heroku-client');
 const { PassThrough } = require('stream');
 const heroku = new Heroku({ token: Config.HEROKU.API_KEY })
-
+const axios = require('axios');
 
 //const b64utf8 = require('./activity');
 
@@ -112,7 +112,7 @@ const { savefrom} = require("@bochilteam/scraper")
 
 let bocil = require('@bochilteam/scraper')  
 const emoji = require('./plugins/emojitest.js')
-const axios = require('axios');
+
 const prefix = '.'
 const ownerNumber = ['94769370897']
 const cantfind = "*can't find anything*"
