@@ -30,7 +30,7 @@ const axios = require('axios');
 
 
 
-/*
+
 
 var bdianases = config.SESSION
 
@@ -59,7 +59,7 @@ console.log(`GETTING SESSION`)
 
 
 
-*/
+
 
 
 
@@ -838,7 +838,6 @@ conn.sendMessage(from, { react: { text: `🎧`, key: mek.key }})
 }
 
 connectToWA()
-
 
 
 
