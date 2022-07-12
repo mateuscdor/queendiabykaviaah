@@ -55,7 +55,7 @@ const docsongup = await conn.sendMessage(from , { text: config.SONG_UP }, { quot
 await conn.sendMessage(from ,{ audio: { url: docsong.mp3 }, mimetype: 'audio/mp4' } , { quoted: mek })
 await conn.sendMessage(from, { delete: docsongup.key })
 }
-
+/*
 async function getyt(conn , mek , q) {
 const from = mek.key.remoteJid	
 if (!q) return await conn.sendMessage(from , { text: Lang.N_YT }, { quoted: mek } )
@@ -73,7 +73,7 @@ await conn.sendMessage(from , { text: '╔════════════�
 await conn.sendMessage(from, { delete: srcmsg.key })  
 }
 
-/*
+*/
 
 
 async function getyt(conn , mek , q) {
@@ -109,7 +109,7 @@ var toltext = `
 await conn.sendMessage(from , { text: toltext + mesaj }, { quoted: mek } )
 await conn.sendMessage(from, { delete: srcmsg.key })  
 }
-*/
+
 async function video( conn , mek , name ) {
 const from = mek.key.remoteJid
 if (!name) return await conn.sendMessage(from , { text: Lang.N_VID }, { quoted: mek } )
