@@ -56,7 +56,7 @@ await conn.sendMessage(from ,{ audio: { url: docsong.mp3 }, mimetype: 'audio/mp4
 await conn.sendMessage(from, { delete: docsongup.key })
 }
 
-/*async function getyt(conn , mek , q) {
+async function getyt(conn , mek , q) {
 const from = mek.key.remoteJid	
 if (!q) return await conn.sendMessage(from , { text: Lang.N_YT }, { quoted: mek } )
 var srcmsg =  await conn.sendMessage(from , { text: Lang.S_YT }, { quoted: mek } )
@@ -72,8 +72,8 @@ mesaj += '🧞‍♂️ *' + video.title + '*' + '\n' + '*🧚‍♀️Duration:
 await conn.sendMessage(from , { text: '╔═══════════════╗\n║  *QUEEN DIANA YT SEARCH🎞️* ║\n╚═══════════════╝\n\n' + mesaj }, { quoted: mek } )
 await conn.sendMessage(from, { delete: srcmsg.key })  
 }
-*/
 
+/*
 
 
 async function getyt(conn , mek , q) {
@@ -109,7 +109,7 @@ var toltext = `
 await conn.sendMessage(from , { text: toltext + mesaj }, { quoted: mek } )
 await conn.sendMessage(from, { delete: srcmsg.key })  
 }
-
+*/
 async function video( conn , mek , name ) {
 const from = mek.key.remoteJid
 if (!name) return await conn.sendMessage(from , { text: Lang.N_VID }, { quoted: mek } )
