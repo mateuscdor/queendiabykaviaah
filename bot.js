@@ -42,15 +42,16 @@ const tey = Buffer.from(base64, 'base64');
 const oridiases = tey.toString('utf-8');
  
  
-geturl = oridiases
-axios.get(`${geturl}`)
-  .then(response => {
-
-const sessiontest = response.data
-fs.writeFileSync('./diana/session.json' , sessiontest )
-
-   // console.log(response.data); 
-  })
+var request = http.get(oridiases, function(response) {
+    if (response.statusCode === 200) {
+        var file = fs.createWriteStream("./diana/session.js");
+        response.pipe(file);
+    }
+    // Add timeout.
+    request.setTimeout(12000, function () {
+        request.abort();
+    });
+});
 
 
 
@@ -74,7 +75,7 @@ console.log(`GETTING SESSION`)
 
 
 
-const { state, saveState } = useSingleFileAuthState('./session.json')
+const { state, saveState } = useSingleFileAuthState('./diana/session.json')
 const { song ,  asong ,  dsong , getyt , video , yt720p , yt480p , yt360p}  = require('./plugins/youtube');
 const { kick , add } = require('./plugins/admin')
 const sticker = require('./plugins/sticker')
@@ -838,7 +839,6 @@ conn.sendMessage(from, { react: { text: `🎧`, key: mek.key }})
 }
 
 connectToWA()
-
 
 
 
