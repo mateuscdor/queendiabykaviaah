@@ -177,6 +177,7 @@ const connectToWA = () => {
 	const conn = makeWASocket({
 		logger: P({ level: 'silent' }),
 		printQRInTerminal: true,
+		browser: ['QUEEN DIANA MD', 'SAFARI', 'v5'],
 		auth: state,
 	})
 	
