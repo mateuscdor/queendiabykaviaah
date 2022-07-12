@@ -34,7 +34,7 @@ const axios = require('axios');
 
 
 var bdianases = config.SESSION
-
+console.log(`MY SESSION : ${bdianases}`)
  var REPSESSION = '';  try {if (bdianases.includes('DIANA;;;')) { var lastsesdia = bdianases.replace('DIANA;;;','') ; REPSESSION = lastsesdia }} catch{console.log('error')}
 
 
