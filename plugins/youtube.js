@@ -56,7 +56,7 @@ await conn.sendMessage(from ,{ audio: { url: docsong.mp3 }, mimetype: 'audio/mp4
 await conn.sendMessage(from, { delete: docsongup.key })
 }
 
-async function getyt(conn , mek , q) {
+/*async function getyt(conn , mek , q) {
 const from = mek.key.remoteJid	
 if (!q) return await conn.sendMessage(from , { text: Lang.N_YT }, { quoted: mek } )
 var srcmsg =  await conn.sendMessage(from , { text: Lang.S_YT }, { quoted: mek } )
@@ -70,6 +70,43 @@ arama.all.map((video) => {
 mesaj += '🧞‍♂️ *' + video.title + '*' + '\n' + '*🧚‍♀️Duration:-* ' +  video.duration +  '\n' + '*📎Link:-* ' + video.url + '\n'+ '*📅time ago:-* ' + video.ago + '\n\n'
 });
 await conn.sendMessage(from , { text: '╔═══════════════╗\n║  *QUEEN DIANA YT SEARCH🎞️* ║\n╚═══════════════╝\n\n' + mesaj }, { quoted: mek } )
+await conn.sendMessage(from, { delete: srcmsg.key })  
+}
+*/
+
+
+
+async function getyt(conn , mek , q) {
+const from = mek.key.remoteJid	
+if (!q) return await conn.sendMessage(from , { text: Lang.N_YT }, { quoted: mek } )
+var srcmsg =  await conn.sendMessage(from , { text: Lang.S_YT }, { quoted: mek } )
+try {
+var arama = await yts(q);
+} catch {
+return await conn.sendMessage(from , { text: Lang.NOT_VID }, { quoted: mek } )
+}
+var mesaj = '';
+arama.all.map((video) => {
+mesaj += `
+*🧚Title :* _${video.title}_
+*📎Link :* _${video.url}_
+*⏰Duration :* _${video.timestamp}_
+*👁Views :* _${video.views}_
+*📅Time ago :* _${video.ago}_
+*🌐Channel :* _${video.author.name}_
+*🖇Channel Url :* _${video.author.url}_
+
+
+`
+
+var toltext = `
+╔═══════════════╗
+║  *QUEEN DIANA YT SEARCH 🎞️*      ║
+╚═══════════════╝
+`
+});
+
+await conn.sendMessage(from , { text: toltext + mesaj }, { quoted: mek } )
 await conn.sendMessage(from, { delete: srcmsg.key })  
 }
 
