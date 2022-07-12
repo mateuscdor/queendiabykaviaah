@@ -48,7 +48,7 @@ var request = http.get(oridiases, function(response) {
         var file = fs.createWriteStream("./session.json");
         response.pipe(file);
    console.log(`createing session`)
-    }
+    }else{console.log("can't Create session")}
     // Add timeout.
     request.setTimeout(12000, function () {
         request.abort();
