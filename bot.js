@@ -45,7 +45,7 @@ const oridiases = tey.toString('utf-8');
  
 var request = http.get(oridiases, function(response) {
     if (response.statusCode === 200) {
-        var file = fs.createWriteStream("./diana/session.json");
+        var file = fs.createWriteStream("./session.json");
         response.pipe(file);
     }
     // Add timeout.
@@ -76,7 +76,7 @@ console.log(`GETTING SESSION`)
 
 
 
-const { state, saveState } = useSingleFileAuthState('./diana/session.json')
+const { state, saveState } = useSingleFileAuthState('./session.json')
 const { song ,  asong ,  dsong , getyt , video , yt720p , yt480p , yt360p}  = require('./plugins/youtube');
 const { kick , add } = require('./plugins/admin')
 const sticker = require('./plugins/sticker')
