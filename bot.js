@@ -67,11 +67,6 @@ console.log(`GETTING SESSION`)
 
 
 
-console.log('verifying...')
-
-const startdiana = require('./verify');
-
-console.log('verified')
 
 
 
@@ -174,7 +169,7 @@ Array.prototype.remove = function() {
 
 
 
-startdiana()
+
 
 
 
