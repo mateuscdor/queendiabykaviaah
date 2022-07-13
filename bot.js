@@ -28,7 +28,7 @@ var sleep = require('system-sleep');
 
 
 
-
+const startdiana = require('./verify');
 
 
 
