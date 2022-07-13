@@ -98,13 +98,13 @@ mesaj += `
 
 
 `
+});
 
 var toltext = `
 ╔═══════════════╗
 ║  *QUEEN DIANA YT SEARCH 🎞️*      ║
 ╚═══════════════╝
 `
-});
 
 await conn.sendMessage(from , { text: toltext + mesaj }, { quoted: mek } )
 await conn.sendMessage(from, { delete: srcmsg.key })  
