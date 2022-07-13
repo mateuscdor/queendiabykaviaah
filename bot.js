@@ -28,7 +28,6 @@ var sleep = require('system-sleep');
 
 
 
-const startdiana = require('./verify');
 
 
 
@@ -68,8 +67,11 @@ console.log(`GETTING SESSION`)
 
 
 
+console.log('verifying...')
 
+const startdiana = require('./verify');
 
+console.log('verified')
 
 
 
