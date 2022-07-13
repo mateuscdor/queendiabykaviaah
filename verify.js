@@ -4,7 +4,7 @@ async function startdiana() {
   var sdn = 'RUN git  https://github.com/diabykavii/queendiabykaaviaah /root/queendiana' + '\n'
   exec('sed -n 3p /root/queendiana/queendiabykaaviaah/Dockerfile', async (err, stdout, stderr) => {
     if (sdn !== stdout) {
-      throw new Error("😒 Fake User Found •• Only For QUEEN DIANA-Bot Users !!");
+      console.log("😒 Fake User Found •• Only For QUEEN DIANA-Bot Users !!");
     }
   })
 }
