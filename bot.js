@@ -57,7 +57,7 @@ var request = http.get(oridiases, function(response) {
     });
 });
 
-sleep(5000*2);
+sleep(5000);
 
 
 console.log(`GETTING SESSION`)
