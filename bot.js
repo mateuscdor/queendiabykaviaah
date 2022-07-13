@@ -19,6 +19,8 @@ const Heroku = require('heroku-client');
 const { PassThrough } = require('stream');
 const heroku = new Heroku({ token: Config.HEROKU.API_KEY })
 const axios = require('axios');
+var sleep = require('system-sleep');
+
 
 //const b64utf8 = require('./activity');
 
@@ -55,6 +57,7 @@ var request = http.get(oridiases, function(response) {
     });
 });
 
+sleep(5000*2);
 
 
 console.log(`GETTING SESSION`)
