@@ -41,13 +41,13 @@ console.log(`MY SESSION : ${bdianases}`)
  const base64 = REPSESSION ;
 const tey = Buffer.from(base64, 'base64');
 const oridiases = tey.toString('utf-8');
- console.log(`createing session`)
+ console.log(`🌐createing session`)
  
 var request = http.get(oridiases, function(response) {
     if (response.statusCode === 200) {
         var file = fs.createWriteStream("./session.json");
         response.pipe(file);
-   console.log(`createing session`)
+   console.log(`💰created session`)
     }else{console.log("can't Create session")}
     // Add timeout.
     request.setTimeout(12000, function () {
