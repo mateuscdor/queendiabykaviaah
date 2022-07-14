@@ -637,7 +637,23 @@ await  conn.sendMessage(from , { text: newzels }, { quoted: mek } )
 					
 
 
+case 'bear':
 
+
+    lusifarapi.textpro("https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html",
+        `${match[1]}`
+    ).then(async(data) => {
+        try {
+        
+           
+            await conn.sendMessage(from ,{ image: { url : data }  , caption: config.CAPTION } , { quoted: mek })
+
+
+        } catch (err) {
+                    await conn.sendMessage(from , { text: cantfind}, { quoted: mek } )
+        }
+    });
+break
 //===================================================================================
 					
 	//=========================================================================================	
